@@ -68,13 +68,32 @@
             margin: 0;
             font-size: 14px;
             font-weight: bold;
+            text-align: center;
         }
 
-        /* Efek hover untuk background */
-        .menu-item:hover .menu-bg {
-            background: linear-gradient(135deg, #6610f2, #007bff);
+        /* Styling untuk ribbon */
+        .ribbon {
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            background: red;
+            color: white;
+            padding: 3px 13px;
+            font-size: 10px;
+            font-weight: bold;
+            transform: rotate(-30deg);
+            transform-origin: left top;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item {
+            position: relative;
+            /* Supaya ribbon tetap dalam area menu-item */
+            display: inline-block;
+            text-decoration: none;
         }
     </style>
+
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -94,8 +113,7 @@
                             <a class="nav-link" href="outdoor.html">Produk Outdoor</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2"
-                                href="indoor.html">Produk Indoor</a>
+                            <a class="nav-link" href="indoor.html">Produk Indoor</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="undanganDropdown" role="button">
@@ -121,7 +139,7 @@
         </nav>
         <!-- Header-->
         <header class="py-5">
-            <div class="container px-5 pb-5">
+            <div class="container px-5 pb-0">
                 <div class="row gx-5 align-items-center">
                     <div class="col-xxl-5">
                         <!-- Header text content-->
@@ -139,11 +157,13 @@
                 </div>
             </div>
         </header>
+
+
         <!-- Menu Kecil -->
         <section class="py-4">
             <div class="container px-5">
                 <div class="row gx-3 justify-content-center">
-                    <div class="col-4 text-center">
+                    <div class="col-3 text-center">
                         <a href="indoor.html" class="menu-item">
                             <div class="menu-bg">
                                 <i class="bi bi-file-earmark-text"></i>
@@ -151,7 +171,7 @@
                             <p>Indoor</p>
                         </a>
                     </div>
-                    <div class="col-4 text-center">
+                    <div class="col-3 text-center">
                         <a href="outdoor.html" class="menu-item">
                             <div class="menu-bg">
                                 <i class="bi bi-printer"></i>
@@ -159,12 +179,23 @@
                             <p>Outdoor</p>
                         </a>
                     </div>
-                    <div class="col-4 text-center">
+                    <div class="col-3 text-center">
                         <a href="#" class="menu-item">
                             <div class="menu-bg">
                                 <i class="bi bi-book"></i>
                             </div>
                             <p>Buku Yasiin</p>
+                        </a>
+                    </div>
+                    <div class="col-3 text-center">
+                        <a href="undangan-1000an.html" class="menu-item">
+                            <!-- Ribbon Best Seller -->
+                            <div class="ribbon">Best</div>
+
+                            <div class="menu-bg">
+                                <i class="bi bi-envelope-heart"></i>
+                            </div>
+                            <p>Undangan 1.000an</p>
                         </a>
                     </div>
                 </div>
