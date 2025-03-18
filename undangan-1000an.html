@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>rizqidesain.id</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/icon.ico" />
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+        .custom-btn {
+            border-radius: 30px;
+            /* Membulatkan sudut */
+            padding: 10px 20px;
+            /* Menambah ruang di dalam tombol */
+        }
+
+        .img-clickable {
+            cursor: pointer !important;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+
+        .header {
+            margin-bottom: 0px !important;
+        }
+
+        .custom-btn:disabled,
+        .custom-btn[disabled] {
+            opacity: 0.5;
+            /* Buat tampilan agak transparan */
+            pointer-events: none;
+            /* Mencegah klik */
+            cursor: not-allowed;
+            /* Ubah cursor */
+            border: none;
+            background-color: #cdcbcb !important;
+            color: #9a9999 !important;
+            /* Tetap warna kuning */
+        }
+
+        .custom-btn {
+            color: white;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            background: red;
+            color: white;
+            padding: 5px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            transform: rotate(-45deg);
+            z-index: 10;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .custom-table td {
+            padding: 2px 8px;
+            /* Atur padding atas-bawah 3px, kiri-kanan 8px */
+            vertical-align: middle;
+            /* Agar teks sejajar di tengah */
+        }
+
+        .pembatas {
+            background: linear-gradient(to right, #007bff, #ff416c);
+            /* Warna Gradient */
+            border-radius: 8px;
+            /* Membuat sudut lebih halus */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            /* Efek bayangan */
+        }
+
+
+        /* Jika layar lebih kecil dari 576px (HP) */
+        @media (max-width: 576px) {
+            .ribbon {
+                top: 5px;
+                /* Posisinya naik sedikit */
+                left: -10px;
+                /* Posisinya lebih dekat ke pojok */
+                padding: 3px 10px;
+                /* Padding lebih kecil */
+                font-size: 10px;
+                /* Font lebih kecil */
+            }
+
+            .container-produk {
+                font-size: 10px;
+            }
+
+            .card-title {
+                font-size: 14px;
+            }
+
+            .custom-btn {
+                padding: 3px 14px;
+                font-size: 10px;
+            }
+
+        }
+
+        /* Efek hover untuk background */
+        .menu-item:hover .menu-bg {
+            background: linear-gradient(135deg, #6610f2, #007bff);
+        }
+
+        .btn-beranda {
+            transition: background 0.3s, transform 0.2s;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-beranda:hover {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            /* Warna gradasi saat hover */
+            transform: scale(1.05);
+            /* Sedikit membesar saat hover */
+        }
+    </style>
+
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container px-5">
+                <a class="navbar-brand" href="beranda.html"><span
+                        class="fw-bolder text-primary">rizqidesain.id</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item">
+                            <a class="nav-link" href="outdoor.html">Produk Outdoor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="indoor.html">Produk Indoor</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2"
+                                href="#" id="undanganDropdown" role="button">
+                                Undangan
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="undanganDropdown">
+                                <li><a class="dropdown-item" href="undangan-1000an.html">Undangan Blangko 1.000 an</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Undangan Blangko Premium</a></li>
+                                <li><a class="dropdown-item" href="#">Undangan Eksekutif Custom</a></li>
+                                <li><a class="dropdown-item" href="#">Ultah</a></li>
+                                <li><a class="dropdown-item" href="#">Kenduri</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Buku Yasiin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Amplop Kondangan</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="py-5">
+            <div class="container px-5 pb-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-xxl-5">
+                        <!-- Header text content-->
+                        <div class="text-center text-xxl-start">
+                            <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
+                                <div class="text-uppercase">
+                                    Design &middot; Printing &middot; Editing
+                                </div>
+                            </div>
+                            <div class="fs-3 fw-light text-muted">
+                                View and Choose Your Product
+                            </div>
+                            <h1 class="display-3 fw-bolder mb-0">
+                                <span class="text-gradient d-inline">Best Seller - Undangan 1000an</span>
+                            </h1>
+                            <a href="beranda.html" class="text-decoration-none">
+                                <i
+                                    class="bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2 d-inline-block mt-3 btn-beranda">
+                                    BERANDA
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Produk-->
+        <div class="container-produk px-5 py-4">
+            <div class="row gx-4 gy-4 justify-content-center">
+
+                <!-- Pembatas dengan Judul -->
+                <div class="pembatas text-white text-center py-3">
+                    <h3 class="fw-bold m-0">Undangan Card NK</h3>
+                </div>
+
+                <!-- ====================================== NK-A01 ====================================== -->
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Seribuan</div>
+                        <img src="img/undangan-NK-A01.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-NK-A01.jpg" />
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">NK Card NK-A01</h5>
+                            <table class="table table-borderless text-muted custom-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Minimal</td>
+                                        <td>50pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Buka</td>
+                                        <td>20,2 x 19,4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Lipat</td>
+                                        <td>11,2 x 19,4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gratis</td>
+                                        <td>Plastik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Plastik</td>
+                                        <td>11,5 x 20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h6 class="fw-bold text-primary" style="text-align: left;">
+                                Rp 1.000 <br>
+                                Rp 1.250
+                                <span class="text-muted ms-2" style="font-weight: normal; font-size: 10px;">(Foto +
+                                    Peta)</span>
+                            </h6>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== NK-A02 ====================================== -->
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Seribuan</div>
+                        <img src="img/undangan-NK-A02.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-NK-A02.jpg" />
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">NK Card NK-A02</h5>
+                            <table class="table table-borderless text-muted custom-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Minimal</td>
+                                        <td>50pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Buka</td>
+                                        <td>20,2 x 19,4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Lipat</td>
+                                        <td>11,2 x 19,4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gratis</td>
+                                        <td>Plastik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Plastik</td>
+                                        <td>11,5 x 20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h6 class="fw-bold text-primary" style="text-align: left;">
+                                Rp 1.000 <br>
+                                Rp 1.250
+                                <span class="text-muted ms-2" style="font-weight: normal; font-size: 10px;">(Foto +
+                                    Peta)</span>
+                            </h6>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== NK-A03 ====================================== -->
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Seribuan</div>
+                        <img src="img/undangan-NK-A03.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-NK-A03.jpg" />
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">NK Card NK-A03</h5>
+                            <table class="table table-borderless text-muted custom-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Minimal</td>
+                                        <td>50pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Buka</td>
+                                        <td>20,2 x 19,4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Lipat</td>
+                                        <td>11,2 x 19,4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gratis</td>
+                                        <td>Plastik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Plastik</td>
+                                        <td>11,5 x 20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h6 class="fw-bold text-primary" style="text-align: left;">
+                                Rp 1.000 <br>
+                                Rp 1.250
+                                <span class="text-muted ms-2" style="font-weight: normal; font-size: 10px;">(Foto +
+                                    Peta)</span>
+                            </h6>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== NK-A04 ====================================== -->
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Seribuan</div>
+                        <img src="img/undangan-NK-A04.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-NK-A04.jpg" />
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">NK Card NK-A04</h5>
+                            <table class="table table-borderless text-muted custom-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Minimal</td>
+                                        <td>50pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Buka</td>
+                                        <td>20,2 x 19,4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Lipat</td>
+                                        <td>11,2 x 19,4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gratis</td>
+                                        <td>Plastik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Plastik</td>
+                                        <td>11,5 x 20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h6 class="fw-bold text-primary" style="text-align: left;">
+                                Rp 1.000 <br>
+                                Rp 1.250
+                                <span class="text-muted ms-2" style="font-weight: normal; font-size: 10px;">(Foto +
+                                    Peta)</span>
+                            </h6>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== NK-A05 ====================================== -->
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Seribuan</div>
+                        <img src="img/undangan-NK-A05.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-NK-A05.jpg" />
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">NK Card NK-A05</h5>
+                            <table class="table table-borderless text-muted custom-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Minimal</td>
+                                        <td>50pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Buka</td>
+                                        <td>20,2 x 19,4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Lipat</td>
+                                        <td>11,2 x 19,4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gratis</td>
+                                        <td>Plastik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Plastik</td>
+                                        <td>11,5 x 20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h6 class="fw-bold text-primary" style="text-align: left;">
+                                Rp 1.000 <br>
+                                Rp 1.250
+                                <span class="text-muted ms-2" style="font-weight: normal; font-size: 10px;">(Foto +
+                                    Peta)</span>
+                            </h6>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== NK-A06 ====================================== -->
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Seribuan</div>
+                        <img src="img/undangan-NK-A06.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-NK-A06.jpg" />
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">NK Card NK-A06</h5>
+                            <table class="table table-borderless text-muted custom-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Minimal</td>
+                                        <td>50pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Buka</td>
+                                        <td>20,2 x 19,4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Lipat</td>
+                                        <td>11,2 x 19,4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gratis</td>
+                                        <td>Plastik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Plastik</td>
+                                        <td>11,5 x 20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h6 class="fw-bold text-primary" style="text-align: left;">
+                                Rp 1.000 <br>
+                                Rp 1.250
+                                <span class="text-muted ms-2" style="font-weight: normal; font-size: 10px;">(Foto +
+                                    Peta)</span>
+                            </h6>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Pembatas dengan Judul -->
+                <div class="pembatas text-white text-center py-3">
+                    <h3 class="fw-bold m-0">Undangan Sakura Card</h3>
+                </div>
+                <!-- ====================================== SD-01 ====================================== -->
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Seribuan</div>
+                        <img src="img/undangan-SD-01.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SD-01.jpg" />
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sakura Card 2 SD-01</h5>
+                            <table class="table table-borderless text-muted custom-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Minimal</td>
+                                        <td>50pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Buka</td>
+                                        <td>20,2 x 19,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Lipat</td>
+                                        <td>11,2 x 19,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gratis</td>
+                                        <td>Plastik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Plastik</td>
+                                        <td>11,5 x 20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h6 class="fw-bold text-primary" style="text-align: left;">
+                                Rp 1.000 <br>
+                                Rp 1.250
+                                <span class="text-muted ms-2" style="font-weight: normal; font-size: 10px;">(Foto +
+                                    Peta)</span>
+                            </h6>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== SD-02 ====================================== -->
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Seribuan</div>
+                        <img src="img/undangan-SD-02.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SD-02.jpg" />
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sakura Card 2 SD-02</h5>
+                            <table class="table table-borderless text-muted custom-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Minimal</td>
+                                        <td>50pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Buka</td>
+                                        <td>20,2 x 19,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Lipat</td>
+                                        <td>11,2 x 19,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gratis</td>
+                                        <td>Plastik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Plastik</td>
+                                        <td>11,5 x 20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h6 class="fw-bold text-primary" style="text-align: left;">
+                                Rp 1.000 <br>
+                                Rp 1.250
+                                <span class="text-muted ms-2" style="font-weight: normal; font-size: 10px;">(Foto +
+                                    Peta)</span>
+                            </h6>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== SD-03 ====================================== -->
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Seribuan</div>
+                        <img src="img/undangan-SD-03.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SD-03.jpg" />
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sakura Card 2 SD-03</h5>
+                            <table class="table table-borderless text-muted custom-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Minimal</td>
+                                        <td>50pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Buka</td>
+                                        <td>20,2 x 19,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Lipat</td>
+                                        <td>11,2 x 19,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gratis</td>
+                                        <td>Plastik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Plastik</td>
+                                        <td>11,5 x 20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h6 class="fw-bold text-primary" style="text-align: left;">
+                                Rp 1.000 <br>
+                                Rp 1.250
+                                <span class="text-muted ms-2" style="font-weight: normal; font-size: 10px;">(Foto +
+                                    Peta)</span>
+                            </h6>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== SD-04 ====================================== -->
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Seribuan</div>
+                        <img src="img/undangan-SD-04.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SD-04.jpg" />
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sakura Card 2 SD-4</h5>
+                            <table class="table table-borderless text-muted custom-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Minimal</td>
+                                        <td>50pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Buka</td>
+                                        <td>20,2 x 19,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Lipat</td>
+                                        <td>11,2 x 19,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gratis</td>
+                                        <td>Plastik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Plastik</td>
+                                        <td>11,5 x 20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h6 class="fw-bold text-primary" style="text-align: left;">
+                                Rp 1.000 <br>
+                                Rp 1.250
+                                <span class="text-muted ms-2" style="font-weight: normal; font-size: 10px;">(Foto +
+                                    Peta)</span>
+                            </h6>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== SD-05 ====================================== -->
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Seribuan</div>
+                        <img src="img/undangan-SD-05.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SD-05.jpg" />
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sakura Card 2 SD-05</h5>
+                            <table class="table table-borderless text-muted custom-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Minimal</td>
+                                        <td>50pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Buka</td>
+                                        <td>20,2 x 19,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Lipat</td>
+                                        <td>11,2 x 19,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gratis</td>
+                                        <td>Plastik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Plastik</td>
+                                        <td>11,5 x 20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h6 class="fw-bold text-primary" style="text-align: left;">
+                                Rp 1.000 <br>
+                                Rp 1.250
+                                <span class="text-muted ms-2" style="font-weight: normal; font-size: 10px;">(Foto +
+                                    Peta)</span>
+                            </h6>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== SE-01 ====================================== -->
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Seribuan</div>
+                        <img src="img/undangan-SE-01.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SE-01.jpg" />
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sakura Card 2 SE-01</h5>
+                            <table class="table table-borderless text-muted custom-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Minimal</td>
+                                        <td>50pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Buka</td>
+                                        <td>23,8 x 20,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Lipat</td>
+                                        <td>13,3 x 20,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gratis</td>
+                                        <td>Plastik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Plastik</td>
+                                        <td>14 x 21 / 14 x 22</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h6 class="fw-bold text-primary" style="text-align: left;">
+                                Rp 1.000 <br>
+                                Rp 1.250
+                                <span class="text-muted ms-2" style="font-weight: normal; font-size: 10px;">(Foto +
+                                    Peta)</span>
+                            </h6>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== SE-02 ====================================== -->
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Seribuan</div>
+                        <img src="img/undangan-SE-02.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SE-02.jpg" />
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sakura Card 2 SE-02</h5>
+                            <table class="table table-borderless text-muted custom-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Minimal</td>
+                                        <td>50pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Buka</td>
+                                        <td>23,8 x 20,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Lipat</td>
+                                        <td>13,3 x 20,5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gratis</td>
+                                        <td>Plastik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uk. Plastik</td>
+                                        <td>14 x 21 / 14 x 22</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h6 class="fw-bold text-primary" style="text-align: left;">
+                                Rp 1.000 <br>
+                                Rp 1.250
+                                <span class="text-muted ms-2" style="font-weight: normal; font-size: 10px;">(Foto +
+                                    Peta)</span>
+                            </h6>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- About Section-->
+        <section class="bg-light py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-xxl-8">
+                        <div class="text-center my-5">
+                            <h2 class="display-5 fw-bolder">
+                                <span class="text-gradient d-inline">About Me</span>
+                            </h2>
+                            <p class="lead fw-light mb-4">rizqidesain.id | idekado.ku</p>
+                            <p class="text-muted">
+                                Dusun Suklan Desa Sumberbendo Kecamatan Mantup Kabupaten
+                                Lamongan Provinsi Jawa Timur Indonesia, kode pos 62883
+                            </p>
+                            <div class="d-flex justify-content-center fs-2 gap-4">
+                                <a class="text-gradient" href="https://api.whatsapp.com/send?phone=6285707167531"><i
+                                        class="bi bi-whatsapp"></i></a>
+                                <a class="text-gradient"
+                                    href="https://www.instagram.com/rizqi.mhmmd_?igsh=MTRIbzdpM3U5b2czNg=="><i
+                                        class="bi bi-instagram"></i></a>
+                                <a class="text-gradient" href="#!">
+                                    <img src="img/shopee.svg" alt="Shopee" width="24" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer-->
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0">Copyright &copy; Your Website 2023</div>
+                </div>
+                <div class="col-auto">
+                    <a class="small" href="#!">Privacy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Terms</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+<!-- Modal -->
+<div class="modal fade" id="produkModal" tabindex="-1" aria-labelledby="produkModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="produkModalLabel">Detail Produk</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Carousel -->
+                <div id="carouselProduk" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="carouselInner"></div>
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduk"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProduk"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.querySelectorAll(".img-clickable").forEach((item) => {
+        item.addEventListener("click", function () {
+            let carouselInner = document.getElementById("carouselInner");
+            carouselInner.innerHTML = ""; // Kosongkan slide sebelumnya
+
+            let index = 1;
+            let isFirst = true;
+            while (this.getAttribute("data-img" + index)) {
+                let imgSrc = this.getAttribute("data-img" + index);
+                let activeClass = isFirst ? "active" : ""; // Set slide pertama sebagai aktif
+
+                let slide = `
+                                    <div class="carousel-item ${activeClass}">
+                                        <img src="${imgSrc}" class="d-block w-100 rounded">
+                                    </div>
+                                `;
+
+                carouselInner.innerHTML += slide;
+                isFirst = false;
+                index++;
+            }
+        });
+    });
+</script>
+
+</html>
