@@ -60,9 +60,61 @@
       font-size: 12px;
     }
 
-    .custom-btn {
-      padding: 4px 10px;
-      font-size: 10px;
+    .custom-table td {
+      padding: 2px 8px;
+      /* Atur padding atas-bawah 3px, kiri-kanan 8px */
+      vertical-align: middle;
+      /* Agar teks sejajar di tengah */
+    }
+
+    .custom-btn i {
+      color: white;
+    }
+
+
+    /* Jika layar lebih kecil dari 576px (HP) */
+    @media (max-width: 576px) {
+      .ribbon {
+        top: 5px;
+        /* Posisinya naik sedikit */
+        left: -10px;
+        /* Posisinya lebih dekat ke pojok */
+        padding: 3px 10px;
+        /* Padding lebih kecil */
+        font-size: 10px;
+        /* Font lebih kecil */
+      }
+
+      .container-produk {
+        font-size: 10px;
+      }
+
+      .card-title {
+        font-size: 14px;
+      }
+
+      .custom-btn {
+        padding: 3px 14px;
+        font-size: 10px;
+      }
+    }
+
+    /* Efek hover untuk background */
+    .menu-item:hover .menu-bg {
+      background: linear-gradient(135deg, #6610f2, #007bff);
+    }
+
+    .btn-beranda {
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-beranda:hover {
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      /* Warna gradasi saat hover */
+      transform: scale(1.05);
+      /* Sedikit membesar saat hover */
     }
   </style>
 </head>
@@ -92,8 +144,9 @@
                 Undangan
               </a>
               <ul class="dropdown-menu" aria-labelledby="undanganDropdown">
-                <li><a class="dropdown-item" href="#">Pernikahan</a></li>
-                <li><a class="dropdown-item" href="#">Khitan</a></li>
+                <li><a class="dropdown-item" href="undangan-1000an.html">Undangan Blangko 1.000 an</a></li>
+                <li><a class="dropdown-item" href="#">Undangan Blangko Premium</a></li>
+                <li><a class="dropdown-item" href="#">Undangan Eksekutif Custom</a></li>
                 <li><a class="dropdown-item" href="#">Ultah</a></li>
                 <li><a class="dropdown-item" href="#">Kenduri</a></li>
               </ul>
@@ -111,7 +164,7 @@
     </nav>
     <!-- Header-->
     <header class="py-5">
-      <div class="container px-5 pb-5">
+      <div class="container px-5 pb-0">
         <div class="row gx-5 align-items-center">
           <div class="col-xxl-5">
             <!-- Header text content-->
@@ -127,6 +180,12 @@
               <h1 class="display-3 fw-bolder mb-0">
                 <span class="text-gradient d-inline">Produk Outdoor</span>
               </h1>
+              <a href="beranda.html" class="text-decoration-none">
+                <i
+                  class="bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2 d-inline-block mt-3 btn-beranda">
+                  BERANDA
+                </i>
+              </a>
             </div>
           </div>
         </div>
@@ -144,19 +203,19 @@
             <div class="card-body text-center">
               <h5 class="card-title fw-bold">Banner Frontlite W</h5>
               <p class="card-text text-muted">FREE DESAIN, UNLIMITED</p>
-              <h6 class="fw-bold text-primary">
-                Rp 18.500
-                <span class="text-muted text-decoration-line-through ms-2">Rp 20.000</span>
-              </h6>
+
+              <!--Harga-->
+              <h6 id="harga-BANNER" class="fw-bold text-primary text-center"></h6>
+
               <span class="text-muted" style="font-size: 10px">
                 harga khusus order by WhatsApp/Offline ke toko
               </span>
 
               <div class="text-center mt-3">
-                <div class="d-inline-flex gap-2">
+                <div class="d-inline-flex gap-1">
                   <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
-                    class="btn btn-primary custom-btn">
-                    <i class="fas fa-shopping-cart"></i> Order
+                    class="btn bg-gradient-primary-to-secondary custom-btn">
+                    <i class="fas fa-shopping-cart"></i>
                   </a>
                   <a href="#" class="btn btn-warning custom-btn" disabled>
                     <i class="fas fa-shopping-bag"></i> Shopee
@@ -166,7 +225,6 @@
             </div>
           </div>
         </div>
-
         <!-- ====================================== X BANNER ====================================== -->
         <div class="col-6 col-md-4">
           <div class="card shadow-lg border-0 rounded-4">
@@ -178,13 +236,19 @@
               <p class="card-text text-muted">
                 FREE DESAIN, include : banner + stand X + sarung stand
               </p>
-              <h6 class="fw-bold text-primary">Rp 60.000</h6>
+
+              <!--Harga-->
+              <h6 id="harga-XBANNER" class="fw-bold text-primary text-center"></h6>
+
+              <span class="text-muted" style="font-size: 10px">
+                harga khusus order by WhatsApp/Offline ke toko
+              </span>
 
               <div class="text-center mt-3">
-                <div class="d-inline-flex gap-2">
-                  <a href="https://wa.me/6285707167531?text=Halo,%20saya%20order%20Xbanner"
-                    class="btn btn-primary custom-btn">
-                    <i class="fas fa-shopping-cart"></i> Order
+                <div class="d-inline-flex gap-1">
+                  <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                    class="btn bg-gradient-primary-to-secondary custom-btn">
+                    <i class="fas fa-shopping-cart"></i>
                   </a>
                   <a href="#" class="btn btn-warning custom-btn" disabled>
                     <i class="fas fa-shopping-bag"></i> Shopee
@@ -205,13 +269,20 @@
               <p class="card-text text-muted">
                 Belum Cutting _ + cutting Rp 4.000
               </p>
-              <h6 class="fw-bold text-primary">Rp 9.000</h6>
+              </p>
+
+              <!--Harga-->
+              <h6 id="harga-TRANSPARAN" class="fw-bold text-primary text-center"></h6>
+
+              <span class="text-muted" style="font-size: 10px">
+                harga khusus order by WhatsApp/Offline ke toko
+              </span>
 
               <div class="text-center mt-3">
-                <div class="d-inline-flex gap-2">
-                  <a href="https://wa.me/6285707167531?text=Halo,%20saya%20order%20Xtransparan"
-                    class="btn btn-primary custom-btn">
-                    <i class="fas fa-shopping-cart"></i> Order
+                <div class="d-inline-flex gap-1">
+                  <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                    class="btn bg-gradient-primary-to-secondary custom-btn">
+                    <i class="fas fa-shopping-cart"></i>
                   </a>
                   <a href="#" class="btn btn-warning custom-btn" disabled>
                     <i class="fas fa-shopping-bag"></i> Shopee
@@ -221,7 +292,7 @@
             </div>
           </div>
         </div>
-        <!-- ====================================== STIKER AP260 ====================================== -->
+        <!-- ====================================== AP260 ====================================== -->
         <div class="col-6 col-md-4">
           <div class="card shadow-lg border-0 rounded-4">
             <img src="img/outdoor_AP260.jpg" class="card-img-top img-clickable" alt="Produk" data-bs-toggle="modal"
@@ -231,13 +302,20 @@
               <p class="card-text text-muted">
                 Glossy
               </p>
-              <h6 class="fw-bold text-primary">Rp 5.000</h6>
+              </p>
+
+              <!--Harga-->
+              <h6 id="harga-AP" class="fw-bold text-primary text-center"></h6>
+
+              <span class="text-muted" style="font-size: 10px">
+                harga khusus order by WhatsApp/Offline ke toko
+              </span>
 
               <div class="text-center mt-3">
-                <div class="d-inline-flex gap-2">
-                  <a href="https://wa.me/6285707167531?text=Halo,%20saya%20order%20Xtransparan"
-                    class="btn btn-primary custom-btn">
-                    <i class="fas fa-shopping-cart"></i> Order
+                <div class="d-inline-flex gap-1">
+                  <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                    class="btn bg-gradient-primary-to-secondary custom-btn">
+                    <i class="fas fa-shopping-cart"></i>
                   </a>
                   <a href="#" class="btn btn-warning custom-btn" disabled>
                     <i class="fas fa-shopping-bag"></i> Shopee
@@ -258,13 +336,20 @@
               <p class="card-text text-muted">
                 Sudah Porporasi (bolongan untuk sobek) - 100 lembar
               </p>
-              <h6 class="fw-bold text-primary">Rp 25.000</h6>
+              </p>
+
+              <!--Harga-->
+              <h6 id="harga-KARCIS" class="fw-bold text-primary text-center"></h6>
+
+              <span class="text-muted" style="font-size: 10px">
+                harga khusus order by WhatsApp/Offline ke toko
+              </span>
 
               <div class="text-center mt-3">
-                <div class="d-inline-flex gap-2">
-                  <a href="https://wa.me/6285707167531?text=Halo,%20saya%20order%20Xtransparan"
-                    class="btn btn-primary custom-btn">
-                    <i class="fas fa-shopping-cart"></i> Order
+                <div class="d-inline-flex gap-1">
+                  <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                    class="btn bg-gradient-primary-to-secondary custom-btn">
+                    <i class="fas fa-shopping-cart"></i>
                   </a>
                   <a href="#" class="btn btn-warning custom-btn" disabled>
                     <i class="fas fa-shopping-bag"></i> Shopee
@@ -274,7 +359,7 @@
             </div>
           </div>
         </div>
-        <!-- ====================================== KARCIS ====================================== -->
+        <!-- ====================================== KADO ====================================== -->
         <div class="col-6 col-md-4">
           <div class="card shadow-lg border-0 rounded-4">
             <img src="img/outdoor_KERTASKADO_1.jpg" class="card-img-top img-clickable" alt="Produk"
@@ -285,13 +370,20 @@
               <p class="card-text text-muted">
                 menggunakan art paper 120gsm - Bisa req warna desain foto - 3 lembar
               </p>
-              <h6 class="fw-bold text-primary">Rp 10.000</h6>
+              </p>
+
+              <!--Harga-->
+              <h6 id="harga-KADO" class="fw-bold text-primary text-center"></h6>
+
+              <span class="text-muted" style="font-size: 10px">
+                harga khusus order by WhatsApp/Offline ke toko
+              </span>
 
               <div class="text-center mt-3">
-                <div class="d-inline-flex gap-2">
-                  <a href="https://wa.me/6285707167531?text=Halo,%20saya%20order%20Xtransparan"
-                    class="btn btn-primary custom-btn">
-                    <i class="fas fa-shopping-cart"></i> Order
+                <div class="d-inline-flex gap-1">
+                  <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                    class="btn bg-gradient-primary-to-secondary custom-btn">
+                    <i class="fas fa-shopping-cart"></i>
                   </a>
                   <a href="#" class="btn btn-warning custom-btn" disabled>
                     <i class="fas fa-shopping-bag"></i> Shopee
@@ -410,6 +502,35 @@
       }
     });
   });
+</script>
+
+
+<script>
+  let harga_Banner = "18.500";
+  let harga_xbanner = "60.000";
+  let harga_transparan = "9.000";
+  let harga_ap = "5.000";
+  let harga_karcis = "25.000";
+  let harga_kado = "10.000";
+
+  document.getElementById("harga-BANNER").innerHTML = `
+        Rp ${harga_Banner} <span class="text-muted text-decoration-line-through ms-2">Rp 20.000</span>
+    `;
+  document.getElementById("harga-XBANNER").innerHTML = `
+        Rp ${harga_xbanner}
+    `;
+  document.getElementById("harga-TRANSPARAN").innerHTML = `
+        Rp ${harga_transparan}
+    `;
+  document.getElementById("harga-AP").innerHTML = `
+        Rp ${harga_ap}
+    `;
+  document.getElementById("harga-KARCIS").innerHTML = `
+        Rp ${harga_karcis}
+    `;
+  document.getElementById("harga-KADO").innerHTML = `
+        Rp ${harga_kado}
+    `;
 </script>
 
 </html>
