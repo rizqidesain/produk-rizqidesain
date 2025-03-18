@@ -106,7 +106,7 @@
             }
 
             .container-produk {
-                font-size: 10px;
+                font-size: 8px;
             }
 
             .card-title {
@@ -114,8 +114,22 @@
             }
 
             .custom-btn {
-                padding: 3px 14px;
+                padding: 2px 10px;
+                /* Lebih kecil dari sebelumnya */
+                font-size: 8px;
+                /* Ukuran font lebih kecil */
+            }
+
+            .custom-btn i {
                 font-size: 10px;
+                /* Mengecilkan ikon */
+            }
+
+            .custom-table td {
+                padding: 1px 1px;
+                /* Atur padding atas-bawah 3px, kiri-kanan 8px */
+                vertical-align: middle;
+                /* Agar teks sejajar di tengah */
             }
 
         }
@@ -136,6 +150,33 @@
             /* Warna gradasi saat hover */
             transform: scale(1.05);
             /* Sedikit membesar saat hover */
+        }
+
+        .watermark {
+            position: absolute;
+            bottom: 321px;
+            left: 0;
+            width: 50px;
+            /* Sesuaikan ukuran watermark */
+        }
+
+        .watermark img {
+            width: 250%;
+        }
+
+        /* Responsif untuk tampilan HP */
+        @media (max-width: 768px) {
+            .watermark {
+                width: 30px;
+                /* Mengecilkan watermark di HP */
+                bottom: 295px;
+                /* Sesuaikan posisi */
+            }
+
+            .watermark img {
+                width: 150%;
+                /* Sesuaikan skala */
+            }
         }
     </style>
 
@@ -206,10 +247,10 @@
                                 <span class="text-gradient d-inline">Best Seller - Undangan 1000an</span>
                             </h1>
                             <a href="beranda.html" class="text-decoration-none">
-                                <i
+                                <span
                                     class="bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2 d-inline-block mt-3 btn-beranda">
                                     BERANDA
-                                </i>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -226,16 +267,22 @@
                     <h3 class="fw-bold m-0">Undangan Card NK</h3>
                 </div>
 
-                <!-- ====================================== NK-A01 ====================================== -->
+                <!-- ====================================== U101-NK-A01 ====================================== -->
                 <div class="col-6 col-md-4">
                     <div class="card shadow-lg border-0 rounded-4">
                         <!-- Pita Merah -->
                         <div class="ribbon">Seribuan</div>
+
+                        <!-- Watermark -->
+                        <div class="watermark">
+                            <img src="assets/watermark.png" alt="Watermark">
+                        </div>
+
                         <img src="img/undangan-NK-A01.jpg" class="card-img-top img-clickable" alt="Produk"
                             data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-NK-A01.jpg" />
 
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">NK Card NK-A01</h5>
+                            <h5 class="card-title fw-bold">U101-NK Card NK-A01</h5>
                             <table class="table table-borderless text-muted custom-table">
                                 <tbody>
                                     <tr>
@@ -270,7 +317,7 @@
 
                             <div class="text-center mt-3">
                                 <div class="d-inline-flex gap-1">
-                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20U101"
                                         class="btn bg-gradient-primary-to-secondary custom-btn">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
@@ -282,7 +329,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- ====================================== NK-A02 ====================================== -->
+                <!-- ====================================== U102-NK-A02 ====================================== -->
                 <div class="col-6 col-md-4">
                     <div class="card shadow-lg border-0 rounded-4">
                         <!-- Pita Merah -->
@@ -290,8 +337,13 @@
                         <img src="img/undangan-NK-A02.jpg" class="card-img-top img-clickable" alt="Produk"
                             data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-NK-A02.jpg" />
 
+                        <!-- Watermark -->
+                        <div class="watermark">
+                            <img src="assets/watermark.png" alt="Watermark">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">NK Card NK-A02</h5>
+                            <h5 class="card-title fw-bold">U102-NK Card NK-A02</h5>
                             <table class="table table-borderless text-muted custom-table">
                                 <tbody>
                                     <tr>
@@ -326,7 +378,7 @@
 
                             <div class="text-center mt-3">
                                 <div class="d-inline-flex gap-1">
-                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20U102"
                                         class="btn bg-gradient-primary-to-secondary custom-btn">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
@@ -338,7 +390,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- ====================================== NK-A03 ====================================== -->
+                <!-- ====================================== U103-NK-A03 ====================================== -->
                 <div class="col-6 col-md-4">
                     <div class="card shadow-lg border-0 rounded-4">
                         <!-- Pita Merah -->
@@ -346,8 +398,13 @@
                         <img src="img/undangan-NK-A03.jpg" class="card-img-top img-clickable" alt="Produk"
                             data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-NK-A03.jpg" />
 
+                        <!-- Watermark -->
+                        <div class="watermark">
+                            <img src="assets/watermark.png" alt="Watermark">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">NK Card NK-A03</h5>
+                            <h5 class="card-title fw-bold">U103-NK Card NK-A03</h5>
                             <table class="table table-borderless text-muted custom-table">
                                 <tbody>
                                     <tr>
@@ -382,7 +439,7 @@
 
                             <div class="text-center mt-3">
                                 <div class="d-inline-flex gap-1">
-                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20U103"
                                         class="btn bg-gradient-primary-to-secondary custom-btn">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
@@ -394,7 +451,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- ====================================== NK-A04 ====================================== -->
+                <!-- ====================================== U104-NK-A04 ====================================== -->
                 <div class="col-6 col-md-4">
                     <div class="card shadow-lg border-0 rounded-4">
                         <!-- Pita Merah -->
@@ -402,8 +459,13 @@
                         <img src="img/undangan-NK-A04.jpg" class="card-img-top img-clickable" alt="Produk"
                             data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-NK-A04.jpg" />
 
+                        <!-- Watermark -->
+                        <div class="watermark">
+                            <img src="assets/watermark.png" alt="Watermark">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">NK Card NK-A04</h5>
+                            <h5 class="card-title fw-bold">U104-NK Card NK-A04</h5>
                             <table class="table table-borderless text-muted custom-table">
                                 <tbody>
                                     <tr>
@@ -438,7 +500,7 @@
 
                             <div class="text-center mt-3">
                                 <div class="d-inline-flex gap-1">
-                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20U104"
                                         class="btn bg-gradient-primary-to-secondary custom-btn">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
@@ -450,7 +512,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- ====================================== NK-A05 ====================================== -->
+                <!-- ====================================== U105-NK-A05 ====================================== -->
                 <div class="col-6 col-md-4">
                     <div class="card shadow-lg border-0 rounded-4">
                         <!-- Pita Merah -->
@@ -458,8 +520,13 @@
                         <img src="img/undangan-NK-A05.jpg" class="card-img-top img-clickable" alt="Produk"
                             data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-NK-A05.jpg" />
 
+                        <!-- Watermark -->
+                        <div class="watermark">
+                            <img src="assets/watermark.png" alt="Watermark">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">NK Card NK-A05</h5>
+                            <h5 class="card-title fw-bold">U105-NK Card NK-A05</h5>
                             <table class="table table-borderless text-muted custom-table">
                                 <tbody>
                                     <tr>
@@ -494,7 +561,7 @@
 
                             <div class="text-center mt-3">
                                 <div class="d-inline-flex gap-1">
-                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20U105"
                                         class="btn bg-gradient-primary-to-secondary custom-btn">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
@@ -506,7 +573,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- ====================================== NK-A06 ====================================== -->
+                <!-- ====================================== U106-NK-A06 ====================================== -->
                 <div class="col-6 col-md-4">
                     <div class="card shadow-lg border-0 rounded-4">
                         <!-- Pita Merah -->
@@ -514,8 +581,13 @@
                         <img src="img/undangan-NK-A06.jpg" class="card-img-top img-clickable" alt="Produk"
                             data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-NK-A06.jpg" />
 
+                        <!-- Watermark -->
+                        <div class="watermark">
+                            <img src="assets/watermark.png" alt="Watermark">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">NK Card NK-A06</h5>
+                            <h5 class="card-title fw-bold">U106-NK Card NK-A06</h5>
                             <table class="table table-borderless text-muted custom-table">
                                 <tbody>
                                     <tr>
@@ -550,7 +622,7 @@
 
                             <div class="text-center mt-3">
                                 <div class="d-inline-flex gap-1">
-                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20U106"
                                         class="btn bg-gradient-primary-to-secondary custom-btn">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
@@ -570,7 +642,7 @@
                 <div class="pembatas text-white text-center py-3">
                     <h3 class="fw-bold m-0">Undangan Sakura Card</h3>
                 </div>
-                <!-- ====================================== SD-01 ====================================== -->
+                <!-- ====================================== U107-SD-01 ====================================== -->
                 <div class="col-6 col-md-4">
                     <div class="card shadow-lg border-0 rounded-4">
                         <!-- Pita Merah -->
@@ -578,8 +650,13 @@
                         <img src="img/undangan-SD-01.jpg" class="card-img-top img-clickable" alt="Produk"
                             data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SD-01.jpg" />
 
+                        <!-- Watermark -->
+                        <div class="watermark">
+                            <img src="assets/watermark.png" alt="Watermark">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Sakura Card 2 SD-01</h5>
+                            <h5 class="card-title fw-bold">U107-Sakura Card 2 SD-01</h5>
                             <table class="table table-borderless text-muted custom-table">
                                 <tbody>
                                     <tr>
@@ -614,7 +691,7 @@
 
                             <div class="text-center mt-3">
                                 <div class="d-inline-flex gap-1">
-                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20U107"
                                         class="btn bg-gradient-primary-to-secondary custom-btn">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
@@ -626,7 +703,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- ====================================== SD-02 ====================================== -->
+                <!-- ====================================== U108-SD-02 ====================================== -->
                 <div class="col-6 col-md-4">
                     <div class="card shadow-lg border-0 rounded-4">
                         <!-- Pita Merah -->
@@ -634,8 +711,13 @@
                         <img src="img/undangan-SD-02.jpg" class="card-img-top img-clickable" alt="Produk"
                             data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SD-02.jpg" />
 
+                        <!-- Watermark -->
+                        <div class="watermark">
+                            <img src="assets/watermark.png" alt="Watermark">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Sakura Card 2 SD-02</h5>
+                            <h5 class="card-title fw-bold">U108-Sakura Card 2 SD-02</h5>
                             <table class="table table-borderless text-muted custom-table">
                                 <tbody>
                                     <tr>
@@ -670,7 +752,7 @@
 
                             <div class="text-center mt-3">
                                 <div class="d-inline-flex gap-1">
-                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20U108"
                                         class="btn bg-gradient-primary-to-secondary custom-btn">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
@@ -682,7 +764,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- ====================================== SD-03 ====================================== -->
+                <!-- ====================================== U109-SD-03 ====================================== -->
                 <div class="col-6 col-md-4">
                     <div class="card shadow-lg border-0 rounded-4">
                         <!-- Pita Merah -->
@@ -690,8 +772,13 @@
                         <img src="img/undangan-SD-03.jpg" class="card-img-top img-clickable" alt="Produk"
                             data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SD-03.jpg" />
 
+                        <!-- Watermark -->
+                        <div class="watermark">
+                            <img src="assets/watermark.png" alt="Watermark">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Sakura Card 2 SD-03</h5>
+                            <h5 class="card-title fw-bold">U109-Sakura Card 2 SD-03</h5>
                             <table class="table table-borderless text-muted custom-table">
                                 <tbody>
                                     <tr>
@@ -726,7 +813,7 @@
 
                             <div class="text-center mt-3">
                                 <div class="d-inline-flex gap-1">
-                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20U109"
                                         class="btn bg-gradient-primary-to-secondary custom-btn">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
@@ -738,7 +825,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- ====================================== SD-04 ====================================== -->
+                <!-- ====================================== U110-SD-04 ====================================== -->
                 <div class="col-6 col-md-4">
                     <div class="card shadow-lg border-0 rounded-4">
                         <!-- Pita Merah -->
@@ -746,8 +833,13 @@
                         <img src="img/undangan-SD-04.jpg" class="card-img-top img-clickable" alt="Produk"
                             data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SD-04.jpg" />
 
+                        <!-- Watermark -->
+                        <div class="watermark">
+                            <img src="assets/watermark.png" alt="Watermark">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Sakura Card 2 SD-4</h5>
+                            <h5 class="card-title fw-bold">U110-Sakura Card 2 SD-4</h5>
                             <table class="table table-borderless text-muted custom-table">
                                 <tbody>
                                     <tr>
@@ -782,7 +874,7 @@
 
                             <div class="text-center mt-3">
                                 <div class="d-inline-flex gap-1">
-                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20U110"
                                         class="btn bg-gradient-primary-to-secondary custom-btn">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
@@ -794,7 +886,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- ====================================== SD-05 ====================================== -->
+                <!-- ====================================== U111-SD-05 ====================================== -->
                 <div class="col-6 col-md-4">
                     <div class="card shadow-lg border-0 rounded-4">
                         <!-- Pita Merah -->
@@ -802,8 +894,13 @@
                         <img src="img/undangan-SD-05.jpg" class="card-img-top img-clickable" alt="Produk"
                             data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SD-05.jpg" />
 
+                        <!-- Watermark -->
+                        <div class="watermark">
+                            <img src="assets/watermark.png" alt="Watermark">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Sakura Card 2 SD-05</h5>
+                            <h5 class="card-title fw-bold">U111-Sakura Card 2 SD-05</h5>
                             <table class="table table-borderless text-muted custom-table">
                                 <tbody>
                                     <tr>
@@ -838,7 +935,7 @@
 
                             <div class="text-center mt-3">
                                 <div class="d-inline-flex gap-1">
-                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20U111"
                                         class="btn bg-gradient-primary-to-secondary custom-btn">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
@@ -850,7 +947,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- ====================================== SE-01 ====================================== -->
+                <!-- ====================================== U112-SE-01 ====================================== -->
                 <div class="col-6 col-md-4">
                     <div class="card shadow-lg border-0 rounded-4">
                         <!-- Pita Merah -->
@@ -858,8 +955,13 @@
                         <img src="img/undangan-SE-01.jpg" class="card-img-top img-clickable" alt="Produk"
                             data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SE-01.jpg" />
 
+                        <!-- Watermark -->
+                        <div class="watermark">
+                            <img src="assets/watermark.png" alt="Watermark">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Sakura Card 2 SE-01</h5>
+                            <h5 class="card-title fw-bold">U112-Sakura Card 2 SE-01</h5>
                             <table class="table table-borderless text-muted custom-table">
                                 <tbody>
                                     <tr>
@@ -894,7 +996,7 @@
 
                             <div class="text-center mt-3">
                                 <div class="d-inline-flex gap-1">
-                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20U112"
                                         class="btn bg-gradient-primary-to-secondary custom-btn">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
@@ -906,7 +1008,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- ====================================== SE-02 ====================================== -->
+                <!-- ====================================== U113-SE-02 ====================================== -->
                 <div class="col-6 col-md-4">
                     <div class="card shadow-lg border-0 rounded-4">
                         <!-- Pita Merah -->
@@ -914,8 +1016,13 @@
                         <img src="img/undangan-SE-02.jpg" class="card-img-top img-clickable" alt="Produk"
                             data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/undangan-SE-02.jpg" />
 
+                        <!-- Watermark -->
+                        <div class="watermark">
+                            <img src="assets/watermark.png" alt="Watermark">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Sakura Card 2 SE-02</h5>
+                            <h5 class="card-title fw-bold">U113-Sakura Card 2 SE-02</h5>
                             <table class="table table-borderless text-muted custom-table">
                                 <tbody>
                                     <tr>
@@ -950,7 +1057,7 @@
 
                             <div class="text-center mt-3">
                                 <div class="d-inline-flex gap-1">
-                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20U113"
                                         class="btn bg-gradient-primary-to-secondary custom-btn">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
@@ -986,9 +1093,6 @@
                                 <a class="text-gradient"
                                     href="https://www.instagram.com/rizqi.mhmmd_?igsh=MTRIbzdpM3U5b2czNg=="><i
                                         class="bi bi-instagram"></i></a>
-                                <a class="text-gradient" href="#!">
-                                    <img src="img/shopee.svg" alt="Shopee" width="24" />
-                                </a>
                             </div>
                         </div>
                     </div>
