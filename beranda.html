@@ -39,8 +39,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            /* Pastikan konten benar-benar di tengah */
             transition: transform 0.2s ease-in-out;
+            position: relative;
         }
+
 
         .menu-item:hover {
             transform: scale(1.1);
@@ -69,9 +73,32 @@
             font-size: 14px;
             font-weight: bold;
             text-align: center;
+            width: 100%;
         }
 
+
         /* Styling untuk ribbon */
+        .ribbon {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            background: red;
+            color: white;
+            padding: 3px 13px;
+            font-size: 10px;
+            font-weight: bold;
+            transform: rotate(-30deg);
+            transform-origin: left top;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .col-3 {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Jika layar lebih kecil dari 576px (HP) */
+        @media (max-width: 576px) {
         .ribbon {
             position: absolute;
             top: 10px;
@@ -86,11 +113,6 @@
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
         }
 
-        .menu-item {
-            position: relative;
-            /* Supaya ribbon tetap dalam area menu-item */
-            display: inline-block;
-            text-decoration: none;
         }
     </style>
 
@@ -110,30 +132,32 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                         <li class="nav-item">
-                            <a class="nav-link" href="outdoor.html">Produk Outdoor</a>
+                          <a class="nav-link" href="outdoor.html">Produk Outdoor</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="indoor.html">Produk Indoor</a>
+                          <a class="nav-link px-4 py-2"
+                            href="indoor.html">Produk Indoor</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="undanganDropdown" role="button">
-                                Undangan
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="undanganDropdown">
-                                <li><a class="dropdown-item" href="#">Pernikahan</a></li>
-                                <li><a class="dropdown-item" href="#">Khitan</a></li>
-                                <li><a class="dropdown-item" href="#">Ultah</a></li>
-                                <li><a class="dropdown-item" href="#">Kenduri</a></li>
-                            </ul>
+                          <a class="nav-link dropdown-toggle" href="#" id="undanganDropdown" role="button">
+                            Undangan
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="undanganDropdown">
+                            <li><a class="dropdown-item" href="undangan-1000an.html">Undangan Blangko 1.000 an</a></li>
+                            <li><a class="dropdown-item" href="#">Undangan Blangko Premium</a></li>
+                            <li><a class="dropdown-item" href="#">Undangan Eksekutif Custom</a></li>
+                            <li><a class="dropdown-item" href="#">Ultah</a></li>
+                            <li><a class="dropdown-item" href="#">Kenduri</a></li>
+                          </ul>
                         </li>
-
+            
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Buku Yasiin</a>
+                          <a class="nav-link" href="#">Buku Yasiin</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Amplop Kondangan</a>
+                          <a class="nav-link" href="#">Amplop Kondangan</a>
                         </li>
-                    </ul>
+                      </ul>
                 </div>
             </div>
         </nav>
@@ -196,6 +220,18 @@
                                 <i class="bi bi-envelope-heart"></i>
                             </div>
                             <p>Undangan 1.000an</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-5 mt-5">
+                <div class="row gx-3 justify-content-center">
+                    <div class="col-3 text-center">
+                        <a href="kalkulator.html" class="menu-item">
+                            <div class="menu-bg">
+                                <i class="bi-calculator"></i>
+                            </div>
+                            <p class="text-center">Kalkulator Banner & Stiker</p>
                         </a>
                     </div>
                 </div>
