@@ -95,8 +95,15 @@
       }
 
       .custom-btn {
-        padding: 3px 14px;
+        padding: 2px 6px;
+        /* Lebih kecil dari sebelumnya */
+        font-size: 8px;
+        /* Ukuran font lebih kecil */
+      }
+
+      .custom-btn i {
         font-size: 10px;
+        /* Mengecilkan ikon */
       }
     }
 
@@ -181,11 +188,17 @@
               <h1 class="display-3 fw-bolder mb-0">
                 <span class="text-gradient d-inline">Produk Outdoor</span>
               </h1>
-              <a href="beranda.html" class="text-decoration-none">
-                <i
+              <a href="beranda.html" class="text-decoration-none me-1">
+                <span
                   class="bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2 d-inline-block mt-3 btn-beranda">
-                  BERANDA
-                </i>
+                  Beranda
+                </span>
+              </a>
+              <a href="outdoor.html" class="text-decoration-none ms-1">
+                <span
+                  class="bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2 d-inline-block mt-3 btn-beranda">
+                  All Product
+                </span>
               </a>
             </div>
           </div>
@@ -196,22 +209,19 @@
     <div class="container-produk px-5 py-4">
       <div class="row gx-4 gy-4 justify-content-center">
         <!-- ====================================== BANNER ====================================== -->
-        <div class="col-6 col-md-4">
+        <div class="col-6 col-md-4 product-card" data-produk="banner">
           <div class="card shadow-lg border-0 rounded-4">
             <img src="img/outdoor_BANNER_1.jpg" class="card-img-top img-clickable" alt="Produk" data-bs-toggle="modal"
-              data-bs-target="#produkModal" data-img1="img/outdoor_BANNER_1.jpg" data-img2="img/outdoor_BANNER_2.jpg" />
+              data-bs-target="#produkModal" data-img1="img/outdoor_BANNER_1.jpg" data-img2="img/outdoor_BANNER_2.jpg"
+              data-produk="banner" />
 
             <div class="card-body text-center">
               <h5 class="card-title fw-bold">Banner Frontlite W</h5>
               <p class="card-text text-muted">FREE DESAIN, UNLIMITED</p>
-
-              <!--Harga-->
               <h6 id="harga-BANNER" class="fw-bold text-primary text-center"></h6>
-
               <span class="text-muted" style="font-size: 10px">
                 harga khusus order by WhatsApp/Offline ke toko
               </span>
-
               <div class="text-center mt-3">
                 <div class="d-inline-flex gap-1">
                   <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
@@ -221,46 +231,49 @@
                   <a href="#" class="btn btn-warning custom-btn" disabled>
                     <i class="fas fa-shopping-bag"></i> Shopee
                   </a>
+                  <button class="btn btn-dark custom-btn share-btn" data-produk="banner">
+                    <i class="fas fa-share-alt"></i>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- ====================================== X BANNER ====================================== -->
-        <div class="col-6 col-md-4">
+        <div class="col-6 col-md-4 product-card" data-produk="xbanner">
           <div class="card shadow-lg border-0 rounded-4">
             <img src="img/outdoor_XBANNER_1.jpg" class="card-img-top img-clickable" alt="Produk" data-bs-toggle="modal"
-              data-bs-target="#produkModal" data-img1="img/outdoor_XBANNER_1.jpg" data-img1="img/outdoor_XBANNER_2.jpg"
-              data-img2="img/outdoor_XBANNER_3.jpg" data-img2="img/outdoor_XBANNER_4.jpg" />
+              data-bs-target="#produkModal" data-img1="img/outdoor_XBANNER_1.jpg" data-img2="img/outdoor_XBANNER_2.jpg"
+              data-produk="xbanner" />
+
             <div class="card-body text-center">
               <h5 class="card-title fw-bold">X Banner + Stand</h5>
               <p class="card-text text-muted">
                 FREE DESAIN, include : banner + stand X + sarung stand
               </p>
-
-              <!--Harga-->
               <h6 id="harga-XBANNER" class="fw-bold text-primary text-center"></h6>
-
               <span class="text-muted" style="font-size: 10px">
                 harga khusus order by WhatsApp/Offline ke toko
               </span>
-
               <div class="text-center mt-3">
                 <div class="d-inline-flex gap-1">
-                  <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                  <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20xbanner"
                     class="btn bg-gradient-primary-to-secondary custom-btn">
                     <i class="fas fa-shopping-cart"></i>
                   </a>
                   <a href="#" class="btn btn-warning custom-btn" disabled>
                     <i class="fas fa-shopping-bag"></i> Shopee
                   </a>
+                  <button class="btn btn-dark custom-btn share-btn" data-produk="xbanner">
+                    <i class="fas fa-share-alt"></i>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- ====================================== STIKER TRANSPARAN ====================================== -->
-        <div class="col-6 col-md-4">
+        <div class="col-6 col-md-4 product-card" data-produk="stiker-transparan">
           <div class="card shadow-lg border-0 rounded-4">
             <img src="img/outdoor_TRANSPARAN_1.jpg" class="card-img-top img-clickable" alt="Produk"
               data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/outdoor_TRANSPARAN_1.jpg"
@@ -288,13 +301,16 @@
                   <a href="#" class="btn btn-warning custom-btn" disabled>
                     <i class="fas fa-shopping-bag"></i> Shopee
                   </a>
+                  <button class="btn btn-dark custom-btn share-btn" data-produk="stiker-transparan">
+                    <i class="fas fa-share-alt"></i>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- ====================================== AP260 ====================================== -->
-        <div class="col-6 col-md-4">
+        <div class="col-6 col-md-4 product-card" data-produk="art-paper">
           <div class="card shadow-lg border-0 rounded-4">
             <img src="img/outdoor_AP260.jpg" class="card-img-top img-clickable" alt="Produk" data-bs-toggle="modal"
               data-bs-target="#produkModal" data-img1="img/outdoor_AP260.jpg" />
@@ -321,13 +337,16 @@
                   <a href="#" class="btn btn-warning custom-btn" disabled>
                     <i class="fas fa-shopping-bag"></i> Shopee
                   </a>
+                  <button class="btn btn-dark custom-btn share-btn" data-produk="art-paper">
+                    <i class="fas fa-share-alt"></i>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- ====================================== KARCIS ====================================== -->
-        <div class="col-6 col-md-4">
+        <div class="col-6 col-md-4 product-card" data-produk="karcis">
           <div class="card shadow-lg border-0 rounded-4">
             <img src="img/outdoor_KARCIS_1.jpg" class="card-img-top img-clickable" alt="Produk" data-bs-toggle="modal"
               data-bs-target="#produkModal" data-img1="img/outdoor_KARCIS_1.jpg" data-img2="img/outdoor_KARCIS_2.jpg"
@@ -355,13 +374,16 @@
                   <a href="#" class="btn btn-warning custom-btn" disabled>
                     <i class="fas fa-shopping-bag"></i> Shopee
                   </a>
+                  <button class="btn btn-dark custom-btn share-btn" data-produk="karcis">
+                    <i class="fas fa-share-alt"></i>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- ====================================== KADO ====================================== -->
-        <div class="col-6 col-md-4">
+        <div class="col-6 col-md-4 product-card" data-produk="kertas-kado">
           <div class="card shadow-lg border-0 rounded-4">
             <img src="img/outdoor_KERTASKADO_1.jpg" class="card-img-top img-clickable" alt="Produk"
               data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/outdoor_KERTASKADO_1.jpg"
@@ -389,6 +411,9 @@
                   <a href="#" class="btn btn-warning custom-btn" disabled>
                     <i class="fas fa-shopping-bag"></i> Shopee
                   </a>
+                  <button class="btn btn-dark custom-btn share-btn" data-produk="kertas-kado">
+                    <i class="fas fa-share-alt"></i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -418,9 +443,9 @@
                     class="bi bi-whatsapp"></i></a>
                 <a class="text-gradient" href="https://www.instagram.com/rizqi.mhmmd_?igsh=MTRIbzdpM3U5b2czNg=="><i
                     class="bi bi-instagram"></i></a>
-                <a class="text-gradient" href="#!">
-                  <img src="img/shopee.svg" alt="Shopee" width="24" />
-                </a>
+                    <a class="text-gradient position-relative" href="#!">
+                      <i class="fas fa-shopping-bag"></i>
+                    </a>
               </div>
             </div>
           </div>
@@ -433,7 +458,7 @@
     <div class="container px-5">
       <div class="row align-items-center justify-content-between flex-column flex-sm-row">
         <div class="col-auto">
-          <div class="small m-0">Copyright &copy; Your Website 2023</div>
+          <div class="small m-0">Copyright &copy; Your Website 2025</div>
         </div>
         <div class="col-auto">
           <a class="small" href="#!">Privacy</a>
@@ -475,7 +500,6 @@
     </div>
   </div>
 </div>
-
 <script>
   document.querySelectorAll(".img-clickable").forEach((item) => {
     item.addEventListener("click", function () {
@@ -501,7 +525,42 @@
     });
   });
 </script>
+<!-- Skrip -->
+<script>
+  // Fungsi untuk membaca parameter dari URL
+  function getParameterByName(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const produkParams = new URLSearchParams(window.location.search).get("produk");
+
+    if (produkParams) {
+      const produkList = produkParams.split(","); // Pisahkan produk dengan koma
+      document.querySelectorAll(".product-card").forEach((card) => {
+        if (!produkList.includes(card.getAttribute("data-produk"))) {
+          card.style.display = "none"; // Sembunyikan produk yang tidak sesuai
+        }
+      });
+    }
+  });
+
+
+  // Event listener untuk tombol share
+  document.querySelectorAll(".share-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      let produk = this.getAttribute("data-produk");
+      let url = window.location.origin + window.location.pathname + "?produk=" + produk;
+
+      navigator.clipboard.writeText(url).then(() => {
+        alert("Link produk telah disalin: " + url);
+      }).catch(err => {
+        console.error("Gagal menyalin: ", err);
+      });
+    });
+  });
+</script>
 
 <script>
   let harga_Banner = "18.500";
