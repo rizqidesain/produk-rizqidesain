@@ -141,10 +141,10 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
             <li class="nav-item">
               <a class="nav-link bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2"
-                href="outdoor.html">Produk Outdoor</a>
+                href="outdoor.html">Outdoor</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="indoor.html">Produk Indoor</a>
+              <a class="nav-link" href="indoor.html">Indoor</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -164,7 +164,14 @@
               <a class="nav-link" href="#">Buku Yasiin</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Amplop Kondangan</a>
+              <a class="nav-link" href="#">Amplop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="stiker.html">Stiker</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                    href="foto.html">Foto</a>
             </li>
           </ul>
         </div>
@@ -186,7 +193,7 @@
                 View and Choose Your Product
               </div>
               <h1 class="display-3 fw-bolder mb-0">
-                <span class="text-gradient d-inline">Produk Outdoor</span>
+                <span class="text-gradient d-inline">Outdoor</span>
               </h1>
               <a href="beranda.html" class="text-decoration-none me-1">
                 <span
@@ -265,43 +272,6 @@
                     <i class="fas fa-shopping-bag"></i> Shopee
                   </a>
                   <button class="btn btn-dark custom-btn share-btn" data-produk="xbanner">
-                    <i class="fas fa-share-alt"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- ====================================== STIKER TRANSPARAN ====================================== -->
-        <div class="col-6 col-md-4 product-card" data-produk="stiker-transparan">
-          <div class="card shadow-lg border-0 rounded-4">
-            <img src="img/outdoor_TRANSPARAN_1.jpg" class="card-img-top img-clickable" alt="Produk"
-              data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/outdoor_TRANSPARAN_1.jpg"
-              data-img2="img/outdoor_TRANSPARAN_2.jpg" />
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Stiker Transparan</h5>
-              <p class="card-text text-muted">
-                Belum Cutting _ + cutting Rp 4.000
-              </p>
-              </p>
-
-              <!--Harga-->
-              <h6 id="harga-TRANSPARAN" class="fw-bold text-primary text-center"></h6>
-
-              <span class="text-muted" style="font-size: 10px">
-                harga khusus order by WhatsApp/Offline ke toko
-              </span>
-
-              <div class="text-center mt-3">
-                <div class="d-inline-flex gap-1">
-                  <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
-                    class="btn bg-gradient-primary-to-secondary custom-btn">
-                    <i class="bi bi-whatsapp"></i>
-                  </a>
-                  <a href="#" class="btn btn-warning custom-btn" disabled>
-                    <i class="fas fa-shopping-bag"></i> Shopee
-                  </a>
-                  <button class="btn btn-dark custom-btn share-btn" data-produk="stiker-transparan">
                     <i class="fas fa-share-alt"></i>
                   </button>
                 </div>
@@ -443,9 +413,9 @@
                     class="bi bi-whatsapp"></i></a>
                 <a class="text-gradient" href="https://www.instagram.com/rizqi.mhmmd_?igsh=MTRIbzdpM3U5b2czNg=="><i
                     class="bi bi-instagram"></i></a>
-                    <a class="text-gradient position-relative" href="#!">
-                      <i class="fas fa-shopping-bag"></i>
-                    </a>
+                <a class="text-gradient position-relative" href="#!">
+                  <i class="fas fa-shopping-bag"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -565,7 +535,6 @@
 <script>
   let harga_Banner = "18.500";
   let harga_xbanner = "60.000";
-  let harga_transparan = "9.000";
   let harga_ap = "5.000";
   let harga_karcis = "25.000";
   let harga_kado = "10.000";
@@ -575,9 +544,6 @@
     `;
   document.getElementById("harga-XBANNER").innerHTML = `
         Rp ${harga_xbanner}
-    `;
-  document.getElementById("harga-TRANSPARAN").innerHTML = `
-        Rp ${harga_transparan}
     `;
   document.getElementById("harga-AP").innerHTML = `
         Rp ${harga_ap}
