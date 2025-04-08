@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>rizqidesain.id</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/icon.ico" />
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+        .custom-btn {
+            border-radius: 30px;
+            /* Membulatkan sudut */
+            padding: 10px 20px;
+            /* Menambah ruang di dalam tombol */
+        }
+
+        .img-clickable {
+            cursor: pointer !important;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+
+        .header {
+            margin-bottom: 0px !important;
+        }
+
+        .custom-btn:disabled,
+        .custom-btn[disabled] {
+            opacity: 0.5;
+            /* Buat tampilan agak transparan */
+            pointer-events: none;
+            /* Mencegah klik */
+            cursor: not-allowed;
+            /* Ubah cursor */
+            border: none;
+            background-color: #cdcbcb !important;
+            color: #9a9999 !important;
+            /* Tetap warna kuning */
+        }
+
+        .custom-btn {
+            color: white;
+        }
+
+        .container-produk {
+            font-size: 12px;
+        }
+
+        .custom-table td {
+            padding: 2px 8px;
+            /* Atur padding atas-bawah 3px, kiri-kanan 8px */
+            vertical-align: middle;
+            /* Agar teks sejajar di tengah */
+        }
+
+
+        /* Jika layar lebih kecil dari 576px (HP) */
+        @media (max-width: 576px) {
+            .ribbon {
+                top: 5px;
+                /* Posisinya naik sedikit */
+                left: -10px;
+                /* Posisinya lebih dekat ke pojok */
+                padding: 3px 10px;
+                /* Padding lebih kecil */
+                font-size: 10px;
+                /* Font lebih kecil */
+            }
+
+            .container-produk {
+                font-size: 10px;
+            }
+
+            .card-title {
+                font-size: 14px;
+            }
+
+            .custom-btn {
+                padding: 2px 6px;
+                /* Lebih kecil dari sebelumnya */
+                font-size: 8px;
+                /* Ukuran font lebih kecil */
+            }
+
+            .custom-btn i {
+                font-size: 10px;
+                /* Mengecilkan ikon */
+            }
+        }
+
+        /* Efek hover untuk background */
+        .menu-item:hover .menu-bg {
+            background: linear-gradient(135deg, #6610f2, #007bff);
+        }
+
+        .btn-beranda {
+            transition: background 0.3s, transform 0.2s;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-beranda:hover {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            /* Warna gradasi saat hover */
+            transform: scale(1.05);
+            /* Sedikit membesar saat hover */
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container px-5">
+                <a class="navbar-brand" href="beranda.html"><span
+                        class="fw-bolder text-primary">rizqidesain.id</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item">
+                            <a class="nav-link" href="outdoor.html">Outdoor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="indoor.html">Indoor</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="undanganDropdown" role="button">
+                                Undangan
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="undanganDropdown">
+                                <li><a class="dropdown-item" href="undangan-1000an.html">Undangan Blangko 1.000 an</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Undangan Blangko Premium</a></li>
+                                <li><a class="dropdown-item" href="#">Undangan Eksekutif Custom</a></li>
+                                <li><a class="dropdown-item" href="#">Ultah</a></li>
+                                <li><a class="dropdown-item" href="#">Kenduri</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Buku Yasiin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Amplop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2"
+                                href="stiker.html">Stiker</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="foto.html">Foto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="py-5">
+            <div class="container px-5 pb-0">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-xxl-5">
+                        <!-- Header text content-->
+                        <div class="text-center text-xxl-start">
+                            <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
+                                <div class="text-uppercase">
+                                    Design &middot; Printing &middot; Editing
+                                </div>
+                            </div>
+                            <div class="fs-3 fw-light text-muted">
+                                View and Choose Your Product
+                            </div>
+                            <h1 class="display-3 fw-bolder mb-0">
+                                <span class="text-gradient d-inline">Stiker</span>
+                            </h1>
+                            <a href="beranda.html" class="text-decoration-none me-1">
+                                <span
+                                    class="bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2 d-inline-block mt-3 btn-beranda">
+                                    Beranda
+                                </span>
+                            </a>
+                            <a href="stiker.html" class="text-decoration-none ms-1">
+                                <span
+                                    class="bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2 d-inline-block mt-3 btn-beranda">
+                                    All Product
+                                </span>
+                            </a>
+                            <a href="kalkulator.html" class="text-decoration-none ms-1">
+                                <span
+                                    class="bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2 d-inline-block mt-3 btn-beranda">
+                                    kalkulator Isi Stiker
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Produk-->
+        <div class="container-produk px-5 py-4">
+            <div class="row gx-4 gy-4 justify-content-center">
+                <!-- ====================================== STIKER TRANSPARAN ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="stiker-transparan">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/stiker_TRANSPARAN_1.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/stiker_TRANSPARAN_1.jpg"
+                            data-img2="img/stiker_TRANSPARAN_2.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Stiker Transparan</h5>
+                            <p class="card-text text-muted">
+                                Belum Cutting _ + cutting Rp 4.000
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-TRANSPARAN" class="fw-bold text-primary text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="stiker-transparan">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== STIKER GRAFTAC ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="stiker-graftac">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/stiker_GRAFTAC_1.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/stiker_GRAFTAC_1.jpg"
+                            data-img2="img/stiker_GRAFTAC_2.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Stiker Graftac A3+</h5>
+                            <p class="card-text text-muted">
+                                Kurang tahan air, jika cipratan masih tahan
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-GRAFTAC" class="fw-bold text-primary text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="stiker-graftac">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== STIKER VINYL ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="stiker-vinyl">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/stiker_VINYL_1.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/stiker_VINYL_1.jpg"
+                            data-img2="img/stiker_VINYL_2.jpg" data-img3="img/stiker_VINYL_3.jpg" />
+                            
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Stiker Tahan Air A3+</h5>
+                            <p class="card-text text-muted">
+                                Sangat tahan air walaupun intensitas tinggi, sangat recomended untuk outdoor
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-VINYL" class="fw-bold text-primary text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="stiker-vinyl">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== STIKER HOLOGRAM ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="stiker-hologram">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/stiker_HOLOGRAM.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/stiker_HOLOGRAM.jpg"
+                            data-img2="img/stiker_HOLOGRAM.jpg" />
+
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Stiker Hologram A3+</h5>
+                            <p class="card-text text-muted">
+                                Stiker hologram ini adalah jenis stiker khusus karena bentuk dan karakternya yang cukup khas. Bila dilihat dari sisi yang berbeda, maka akan memberikan efek warna yang berbeda.
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-HOLOGRAM" class="fw-bold text-primary text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="stiker-hologram">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== STIKER HVS ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="stiker-hvs">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/stiker_HVS.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/stiker_HVS.jpg"
+                            data-img2="img/stiker_HVS.jpg" />
+                            
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Stiker HVS F4</h5>
+                            <p class="card-text text-muted">
+                                Tidak tahan air
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-HVS" class="fw-bold text-primary text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="stiker-hvs">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== STIKER CUTTING ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="stiker-cutting">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/stiker_cutting_1.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/stiker_cutting_1.jpg"
+                            data-img2="img/stiker_cutting_2.jpg" data-img3="img/stiker_cutting_3.jpg" />
+
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Tambahan Jasa Cutting Mesin A3+</h5>
+                            <p class="card-text text-muted">
+                                (tidak putus, tinggal kelopek)
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-CUTTING" class="fw-bold text-primary text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20order%20banner"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="stiker-cutting">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- About Section-->
+        <section class="bg-light py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-xxl-8">
+                        <div class="text-center my-5">
+                            <h2 class="display-5 fw-bolder">
+                                <span class="text-gradient d-inline">About Me</span>
+                            </h2>
+                            <p class="lead fw-light mb-4">rizqidesain.id | idekado.ku</p>
+                            <p class="text-muted">
+                                Dusun Suklan Desa Sumberbendo Kecamatan Mantup Kabupaten
+                                Lamongan Provinsi Jawa Timur Indonesia, kode pos 62883
+                            </p>
+                            <div class="d-flex justify-content-center fs-2 gap-4">
+                                <a class="text-gradient" href="https://api.whatsapp.com/send?phone=6285707167531"><i
+                                        class="bi bi-whatsapp"></i></a>
+                                <a class="text-gradient"
+                                    href="https://www.instagram.com/rizqi.mhmmd_?igsh=MTRIbzdpM3U5b2czNg=="><i
+                                        class="bi bi-instagram"></i></a>
+                                <a class="text-gradient position-relative" href="#!">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer-->
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0">Copyright &copy; Your Website 2025</div>
+                </div>
+                <div class="col-auto">
+                    <a class="small" href="#!">Privacy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Terms</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+<!-- Modal -->
+<div class="modal fade" id="produkModal" tabindex="-1" aria-labelledby="produkModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="produkModalLabel">Detail Produk</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Carousel -->
+                <div id="carouselProduk" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="carouselInner"></div>
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduk"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProduk"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelectorAll(".img-clickable").forEach((item) => {
+        item.addEventListener("click", function () {
+            let carouselInner = document.getElementById("carouselInner");
+            carouselInner.innerHTML = ""; // Kosongkan slide sebelumnya
+
+            let index = 1;
+            let isFirst = true;
+            while (this.getAttribute("data-img" + index)) {
+                let imgSrc = this.getAttribute("data-img" + index);
+                let activeClass = isFirst ? "active" : ""; // Set slide pertama sebagai aktif
+
+                let slide = `
+                                    <div class="carousel-item ${activeClass}">
+                                        <img src="${imgSrc}" class="d-block w-100 rounded">
+                                    </div>
+                                `;
+
+                carouselInner.innerHTML += slide;
+                isFirst = false;
+                index++;
+            }
+        });
+    });
+</script>
+<!-- Skrip -->
+<script>
+    // Fungsi untuk membaca parameter dari URL
+    function getParameterByName(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const produkParams = new URLSearchParams(window.location.search).get("produk");
+
+        if (produkParams) {
+            const produkList = produkParams.split(","); // Pisahkan produk dengan koma
+            document.querySelectorAll(".product-card").forEach((card) => {
+                if (!produkList.includes(card.getAttribute("data-produk"))) {
+                    card.style.display = "none"; // Sembunyikan produk yang tidak sesuai
+                }
+            });
+        }
+    });
+
+
+    // Event listener untuk tombol share
+    document.querySelectorAll(".share-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+            let produk = this.getAttribute("data-produk");
+            let url = window.location.origin + window.location.pathname + "?produk=" + produk;
+
+            navigator.clipboard.writeText(url).then(() => {
+                alert("Link produk telah disalin: " + url);
+            }).catch(err => {
+                console.error("Gagal menyalin: ", err);
+            });
+        });
+    });
+</script>
+
+<script>
+    let harga_transparan = "9.000";
+    let harga_graftac = "8.000";
+    let harga_vinyl = "9.000";
+    let harga_hologram = "15.000";
+    let harga_cutting = "4.000";
+    let harga_hvs = "5.000";
+
+    document.getElementById("harga-TRANSPARAN").innerHTML = `
+        Rp ${harga_transparan}
+    `;
+    document.getElementById("harga-GRAFTAC").innerHTML = `
+        Rp ${harga_graftac}
+    `;
+    document.getElementById("harga-VINYL").innerHTML = `
+        Rp ${harga_vinyl}
+    `;
+    document.getElementById("harga-HOLOGRAM").innerHTML = `
+        Rp ${harga_hologram}
+    `;
+    document.getElementById("harga-CUTTING").innerHTML = `
+        Rp ${harga_cutting}
+    `;
+    document.getElementById("harga-HVS").innerHTML = `
+        Rp ${harga_hvs}
+    `;
+</script>
+
+</html>
