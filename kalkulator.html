@@ -40,7 +40,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
             <div class="container px-5">
-                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">rizqidesain.id</span></a>
+                <a class="navbar-brand" href="beranda.html"><span class="fw-bolder text-primary">rizqidesain.id</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -49,10 +49,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                         <li class="nav-item">
-                            <a class="nav-link" href="outdoor.html">Produk Outdoor</a>
+                            <a class="nav-link" href="outdoor.html">Outdoor</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="indoor.html">Produk Indoor</a>
+                            <a class="nav-link" href="indoor.html">Indoor</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="undanganDropdown" role="button">
@@ -70,7 +70,15 @@
                             <a class="nav-link" href="#">Buku Yasiin</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Amplop Kondangan</a>
+                            <a class="nav-link" href="#">Amplop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="stiker.html">Stiker</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="foto.html">Foto</a>
                         </li>
                     </ul>
                 </div>
@@ -106,9 +114,12 @@
         <div class="container px-5 mt-5">
             <div class="row justify-content-center">
                 <!-- Kalkulator Banner -->
-                <div class="col-md-5">
+                <div class="col-md-5 text-center">
                     <div class="card shadow-sm kalkulator-card">
                         <div class="card-body">
+                            <div class="logo-container">
+                                <img src="assets/logo.png" alt="Logo" class="logo-img">
+                            </div>
                             <h5 class="card-title text-center text-white">Kalkulator Banner</h5>
                             <form>
                                 <div class="mb-3 position-relative">
@@ -142,7 +153,8 @@
                                     onclick="clearAllBanner()">Clear Semua Data</button>
                             </form>
                             <div class="peringatan" style="font-size: 12px; text-align: justify;">
-                                <span><i class="fa-solid fa-triangle-exclamation text-warning"></i> Peringatan</span> <br>
+                                <span><i class="fa-solid fa-triangle-exclamation text-warning"></i> Peringatan</span>
+                                <br>
                                 <ul>
                                     <li> Harga Diatas Hanyalah Estimasi Harga / Belum Harga Pasti</li>
                                     <li> Harga dapat berubah saat melakukan order, karena ada aspek pembulatan bahan.
@@ -172,11 +184,13 @@
                     </div>
                 </div>
 
-                <!-- Kalkulator Isi Stiker -->
                 <div class="col-md-5">
                     <div class="card shadow-sm kalkulator-card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center text-white">Kalkulator Isi Stiker</h5>
+                        <div class="card-body text-center">
+                            <div class="logo-container">
+                                <img src="assets/logo.png" alt="Logo" class="logo-img">
+                            </div>
+                            <h5 class="card-title text-white">Kalkulator Isi Stiker</h5>
                             <form>
                                 <div class="mb-3 position-relative">
                                     <label class="form-label text-white">Panjang Stiker (cm)</label>
@@ -197,6 +211,17 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 position-relative">
+                                    <label class="form-label text-white">Pilih Ukuran Kertas</label>
+                                    <div class="input-group">
+                                        <select class="form-control" id="ukuran-kertas" onchange="hitungStiker()">
+                                            <option value="31x47">A3+ (31x47 cm)</option>
+                                            <option value="21x33">HVS (21x33 cm)</option>
+                                        </select>
+                                        <span class="input-group-text bg-white"><i
+                                                class="fa-solid fa-caret-down"></i></span>
+                                    </div>
+                                </div>
+                                <div class="mb-3 position-relative">
                                     <label class="form-label text-white">Margin per sisi (cm) jika koma gunakan
                                         titik</label>
                                     <div class="input-group">
@@ -214,24 +239,21 @@
                                     onclick="clearAllStiker()">Clear Semua Data</button>
                             </form>
                             <div class="peringatan" style="font-size: 12px; text-align: justify;">
-                                <span><i class="fa-solid fa-triangle-exclamation text-warning"></i> Peringatan</span> <br>
+                                <span><i class="fa-solid fa-triangle-exclamation text-warning"></i> Peringatan</span>
+                                <br>
                                 <ul>
                                     <li> Total Diatas Hanyalah Estimasi</li>
-                                    <li>Ada 6 Bahan Stiker:
+                                    <li>Ada 4 Bahan Stiker:
                                         <ul>
-                                            <li><strong>Bontax HVS :</strong> Bahan Seperti kertas HVS dengan perekat
-                                                stiker disisi belakang
-                                            </li>
-                                            <li><strong>Bontax Graftac :</strong> Bahan Stiker Glossy sedikit rentan
-                                                terhadap Air dengan curah berat (percikan masih aman) TIDAK DISARANKAN
-                                                UNTUK PENGGUNAAN OUTDOOR
-                                            </li>
-                                            <li><strong>Vinyl :</strong> Bahan Stiker Glossy Plastik, Sangat
+                                            <li><strong>Bontax HVS F4:</strong> Bahan Seperti kertas HVS dengan perekat
+                                                stiker di sisi belakang</li>
+                                            <li><strong>Bontax Graftac A3+ :</strong> Bahan Stiker Glossy sedikit rentan
+                                                terhadap air dengan curah berat (percikan masih aman) TIDAK DISARANKAN
+                                                UNTUK PENGGUNAAN OUTDOOR</li>
+                                            <li><strong>Vinyl A3+ :</strong> Bahan Stiker Glossy Plastik, Sangat
                                                 direkomendasikan untuk Outdoor dan sangat tahan dengan air walaupun
-                                                curah deras
-                                            </li>
-                                            <li><strong>Hologram :</strong> Bahan mengkilap Tahan dengan Air
-                                            </li>
+                                                curah deras</li>
+                                            <li><strong>Hologram A3+ :</strong> Bahan mengkilap Tahan dengan Air</li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -239,6 +261,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
         </div>
@@ -247,16 +270,24 @@
             .kalkulator-card {
                 background: linear-gradient(135deg, #007bff, #6610f2);
                 border-radius: 15px;
-                padding: 20px;
+                padding: 5px 20px 20px 20px;
+                /* Atas 5px, kanan 20px, bawah 20px, kiri 20px */
                 color: white;
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
                 margin-bottom: 30px;
             }
 
+
             .form-control,
             .form-select {
                 border-radius: 10px;
             }
+
+            .form-label {
+                text-align: left;
+                display: block;
+            }
+
 
             .clear-btn {
                 border-radius: 10px;
@@ -272,6 +303,18 @@
             .card-title {
                 font-weight: bold;
                 font-size: 1.5rem;
+            }
+
+            .logo-container {
+                display: inline-block;
+                background-color: white;
+                padding: 10px 20px;
+                border-radius: 30px;
+            }
+
+            .logo-img {
+                max-width: 100px;
+                display: block;
             }
         </style>
 
@@ -296,8 +339,17 @@
                 let lebarStiker = parseFloat(document.getElementById("stiker-lebar").value) || 0;
                 let margin = parseFloat(document.getElementById("stiker-margin").value) || 0;
 
-                let cetakLebar = 31;
-                let cetakPanjang = 47;
+                // Ambil ukuran kertas yang dipilih
+                let ukuranKertas = document.getElementById("ukuran-kertas").value;
+                let cetakLebar, cetakPanjang;
+
+                if (ukuranKertas === "21x33") {
+                    cetakLebar = 21;
+                    cetakPanjang = 33;
+                } else {
+                    cetakLebar = 31;
+                    cetakPanjang = 47;
+                }
 
                 if (panjangStiker > 0 && lebarStiker > 0) {
                     let jumlahLebar = Math.floor(cetakLebar / (lebarStiker + margin * 2));
@@ -310,6 +362,7 @@
                     document.getElementById("estimasi-stiker").value = "";
                 }
             }
+
 
             function clearInput(id) {
                 document.getElementById(id).value = "";
