@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>rizqidesain.id</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/icon.ico" />
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+        .custom-btn {
+            border-radius: 30px;
+            /* Membulatkan sudut */
+            padding: 10px 20px;
+            /* Menambah ruang di dalam tombol */
+        }
+
+        .img-clickable {
+            cursor: pointer !important;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+
+        .header {
+            margin-bottom: 0px !important;
+        }
+
+        .custom-btn:disabled,
+        .custom-btn[disabled] {
+            opacity: 0.5;
+            /* Buat tampilan agak transparan */
+            pointer-events: none;
+            /* Mencegah klik */
+            cursor: not-allowed;
+            /* Ubah cursor */
+            border: none;
+            background-color: #cdcbcb !important;
+            color: #9a9999 !important;
+            /* Tetap warna kuning */
+        }
+
+        .custom-btn {
+            color: white;
+        }
+
+        .container-produk {
+            font-size: 12px;
+        }
+
+        .custom-table td {
+            padding: 2px 8px;
+            /* Atur padding atas-bawah 3px, kiri-kanan 8px */
+            vertical-align: middle;
+            /* Agar teks sejajar di tengah */
+        }
+
+        .pembatas {
+            background: linear-gradient(to right, #007bff, #ff416c);
+            /* Warna Gradient */
+            border-radius: 8px;
+            /* Membuat sudut lebih halus */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            /* Efek bayangan */
+        }
+
+        .card {
+            position: relative;
+            overflow: visible;
+            
+        }
+
+        .ribbon {
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            background: red;
+            color: white;
+            padding: 5px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            transform: rotate(-45deg);
+            z-index: 999;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+
+        /* Jika layar lebih kecil dari 576px (HP) */
+        @media (max-width: 576px) {
+            .ribbon {
+                top: 5px;
+                /* Posisinya naik sedikit */
+                left: -10px;
+                /* Posisinya lebih dekat ke pojok */
+                padding: 3px 10px;
+                /* Padding lebih kecil */
+                font-size: 10px;
+                /* Font lebih kecil */
+            }
+
+            .container-produk {
+                font-size: 10px;
+            }
+
+            .card-title {
+                font-size: 14px;
+            }
+
+            .custom-btn {
+                padding: 2px 6px;
+                /* Lebih kecil dari sebelumnya */
+                font-size: 8px;
+                /* Ukuran font lebih kecil */
+            }
+
+            .custom-btn i {
+                font-size: 10px;
+                /* Mengecilkan ikon */
+            }
+
+            .container-produk h6 {
+                font-size: 12px;
+            }
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            text-align: center;
+            pointer-events: none;
+        }
+
+
+        /* Efek hover untuk background */
+        .menu-item:hover .menu-bg {
+            background: linear-gradient(135deg, #6610f2, #007bff);
+        }
+
+        .btn-beranda {
+            transition: background 0.3s, transform 0.2s;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-beranda:hover {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            /* Warna gradasi saat hover */
+            transform: scale(1.05);
+            /* Sedikit membesar saat hover */
+        }
+
+        /* Responsif untuk tampilan HP */
+        @media (max-width: 768px) {
+            .image-overlay {
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, 0.6);
+                color: white;
+                padding: 3px 12px;
+                /* Kurangi padding horizontal */
+                border-radius: 6px;
+                font-size: 9px;
+                text-align: center;
+                white-space: nowrap;
+                /* Cegah teks pindah baris */
+                pointer-events: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container px-5">
+                <a class="navbar-brand" href="beranda.html"><span
+                        class="fw-bolder text-primary">rizqidesain.id</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item">
+                            <a class="nav-link" href="outdoor.html">Outdoor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="indoor.html">Indoor</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="undanganDropdown" role="button">
+                                Undangan
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="undanganDropdown">
+                                <li><a class="dropdown-item" href="undangan-1000an.html">Undangan Blangko 1.000 an</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Undangan Blangko (premium)</a></li>
+                                <li><a class="dropdown-item" href="#">Undangan Eksekutif Custom</a></li>
+                                <li><a class="dropdown-item" href="#">Ultah</a></li>
+                                <li><a class="dropdown-item" href="#">Kenduri</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Buku Yasiin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Amplop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stiker.html">Stiker</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2"
+                                href="foto.html">Foto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="py-5">
+            <div class="container px-5 pb-0">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-xxl-5">
+                        <!-- Header text content-->
+                        <div class="text-center text-xxl-start">
+                            <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
+                                <div class="text-uppercase">
+                                    Design &middot; Printing &middot; Editing
+                                </div>
+                            </div>
+                            <div class="fs-3 fw-light text-muted">
+                                View and Choose Your Product
+                            </div>
+                            <h1 class="display-3 fw-bolder mb-0">
+                                <span class="text-gradient d-inline">Cetak Foto dan FRAME</span>
+                            </h1>
+                            <a href="beranda.html" class="text-decoration-none me-1">
+                                <span
+                                    class="bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2 d-inline-block mt-3 btn-beranda">
+                                    Beranda
+                                </span>
+                            </a>
+                            <a href="foto.html" class="text-decoration-none ms-1">
+                                <span
+                                    class="bg-gradient-primary-to-secondary text-white rounded-pill px-4 py-2 d-inline-block mt-3 btn-beranda">
+                                    All Product
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Produk-->
+        <div class="container-produk px-5 py-4">
+            <div class="row gx-4 gy-4 justify-content-center">
+
+                <!-- Pembatas dengan Judul -->
+                <div class="pembatas text-white text-center py-3">
+                    <h3 class="fw-bold m-0">Frame</h3>
+                </div>
+
+                <!-- ====================================== FOTO FRAME ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="Frame">
+                    <div class="card shadow-lg border-0 rounded-4 position-relative">
+                        <!-- Teks Overlay -->
+                        <div class="image-overlay">Klik untuk melihat lainnya</div>
+
+                        <img src="img/foto_mp.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_mp.jpg"
+                            data-img2="img/foto_mh.jpg" data-img3="img/foto_up.jpg" data-img4="img/foto_uh.jpg"
+                            data-img5="img/foto_ug.jpg" />
+
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Motif Frame / Pigura</h5>
+                            <p class="card-text text-muted">
+                                Frame 16R keatas memiliki desain yang berbeda, dengan ukiran dobel.
+                            </p>
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-Frame"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="Frame">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pembatas dengan Judul -->
+                <div class="pembatas text-white text-center py-3">
+                    <h3 class="fw-bold m-0">Cetak Foto & Pigura</h3>
+                </div>
+
+                <!-- ====================================== FOTO 2X3 ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="2X3">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_2x3.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_2x3.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Pas Foto 2X3</h5>
+                            <p class="card-text text-muted">
+                                Paket isi 5 pcs
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-2X3" class="fw-bold text-primary text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="2X3">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 3X4 ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="3X4">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_3X4.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_3X4.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Pas Foto 3X4</h5>
+                            <p class="card-text text-muted">
+                                Paket Mini 1.500 2pcs | Paket Big 3.000 5pcs
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-3X4" class="fw-bold text-primary text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="3X4">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 4X6 ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="4X6">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_4X6.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_4X6.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Pas Foto 4X6</h5>
+                            <p class="card-text text-muted">
+                                Harga Per Pcs
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-4X6" class="fw-bold text-primary text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="4X6">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 2R ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="2R">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_2R.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_2R.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 2R (premium)</h5>
+                            <p class="card-text text-muted">
+                                5,5 x 19 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-2R" class="fw-bold text-primary text-center"></h6>
+                            <h6 class="fw-bold text-danger text-center">Pgura : Tidak Tersedia</h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="2R">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 3R ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="3R">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_3R.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_3R.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 3R (premium)</h5>
+                            <p class="card-text text-muted">
+                                10,2 x 12,7 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-3R" class="fw-bold text-primary text-center"></h6>
+                            <h6 class="fw-bold text-danger text-center">Pigura : Tidak Tersedia</h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="3R">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 4R ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="4R">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_4R.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_4R.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 4X6 (premium)</h5>
+                            <p class="card-text text-muted">
+                                10,2 x 15,2 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-4R" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-4R" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-4X6"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="4R">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 5R ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="5R">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_5R.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_5R.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 5R (premium)</h5>
+                            <p class="card-text text-muted">
+                                12,7 x 17,8 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-5R" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-5R" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-5R"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="5R">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 6R ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="6R">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_6R.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_6R.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 6R (premium)</h5>
+                            <p class="card-text text-muted">
+                                15,2 x 20,3 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-6R" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-6R" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-6R"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="6R">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 10R ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="10R">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Best Seller</div>
+
+                        <img src="img/foto_10R.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_10R.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 10R (premium)</h5>
+                            <p class="card-text text-muted">
+                                20,3 x 25,5 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-10R" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-10R" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-10R"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="10R">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 10RS ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="10RS">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_10RS.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_10RS.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 10RS (premium)</h5>
+                            <p class="card-text text-muted">
+                                20,3 x 25,5 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-10RS" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-10RS" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-10RS"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="10RS">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 12R ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="12R">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_12R.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_12R.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 12R (premium & standar)</h5>
+                            <p class="card-text text-muted">
+                                30 x 40 cm (Premium = 40.000 | Standar = 5.000)
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-12R" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-12R" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-12R"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="12R">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 12RS ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="12RS">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">Best Seller</div>
+
+                        <img src="img/foto_12RS.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_12RS.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 12RS (premium & standar)</h5>
+                            <p class="card-text text-muted">
+                                30 x 45 cm (Premium = 40.000 | Standar = 5.000)
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-12RS" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-12RS" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-12RS"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="12RS">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 14R ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="14R">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_14R.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_14R.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 14R (premium)</h5>
+                            <p class="card-text text-muted">
+                                35 x 47 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-14R" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-14R" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-14R"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="10R">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 16R ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="16R">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_16R.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_16R.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 14S (premium)</h5>
+                            <p class="card-text text-muted">
+                                40 x 50 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-16R" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-16R" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-16R"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="16R">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 16RS ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="16RS">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_16RS.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_16RS.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 16RS (premium)</h5>
+                            <p class="card-text text-muted">
+                                40 x 60 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-16RS" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-16RS" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-16RS"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="16RS">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 20R ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="16RS">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_20R.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_20R.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 20R (premium)</h5>
+                            <p class="card-text text-muted">
+                                50 x 60 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-20R" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-20R" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-20R"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="20R">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 20RS ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="20RS">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_20RS.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_20RS.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 20RS (premium)</h5>
+                            <p class="card-text text-muted">
+                                50 x 75 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-20RS" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-20RS" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-20RS"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="20RS">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 24R ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="24R">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_24R.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_24R.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 24R (premium)</h5>
+                            <p class="card-text text-muted">
+                                60 x 80 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-24R" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-24R" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-24R"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="24R">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== FOTO 24RS ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="24RS">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <img src="img/foto_24RS.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_24RS.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Foto 24RS (premium)</h5>
+                            <p class="card-text text-muted">
+                                60 x 90 cm
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-24RS" class="fw-bold text-primary text-center"></h6>
+                            <h6 id="FRAME-24RS" class="fw-bold text-danger text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-24RS"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="24RS">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pembatas dengan Judul -->
+                <div class="pembatas text-white text-center py-3">
+                    <h3 class="fw-bold m-0">Special Big Family Photo | Photo Board</h3>
+                </div>
+
+                <!-- ====================================== FOTO BIG ====================================== -->
+                <div class="col-6 col-md-4 product-card" data-produk="big-foto">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <!-- Pita Merah -->
+                        <div class="ribbon">New Product</div>
+                        <!-- Teks Overlay -->
+                        <div class="image-overlay">Klik untuk melihat lainnya</div>
+
+                        <img src="img/foto_BIG_1.jpg" class="card-img-top img-clickable" alt="Produk"
+                            data-bs-toggle="modal" data-bs-target="#produkModal" data-img1="img/foto_BIG_1.jpg"
+                            data-img2="img/foto_BIG_2.jpg" data-img3="img/foto_BIG_3.jpg" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Special Big Family Photo</h5>
+                            <p class="card-text text-muted">
+                                100 x 61 cm <br>
+                                Menggunakan Material Stiker Fuji (doff/glossy) + Laminasi dan menggunakan material Papan
+                                ketebalan 1 cm untuk board nya.
+                            </p>
+
+                            <!--Harga-->
+                            <h6 id="harga-BIG" class="fw-bold text-primary text-center"></h6>
+
+                            <span class="text-muted" style="font-size: 10px">
+                                harga khusus order by WhatsApp/Offline ke toko
+                            </span>
+
+                            <div class="text-center mt-3">
+                                <div class="d-inline-flex gap-1">
+                                    <a href="https://api.whatsapp.com/send?phone=6285707167531&text=Halo,%20saya%20orderFOTO-big-foto"
+                                        class="btn bg-gradient-primary-to-secondary custom-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning custom-btn" disabled>
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                    <button class="btn btn-dark custom-btn share-btn" data-produk="big-foto">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- About Section-->
+        <section class="bg-light py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-xxl-8">
+                        <div class="text-center my-5">
+                            <h2 class="display-5 fw-bolder">
+                                <span class="text-gradient d-inline">About Me</span>
+                            </h2>
+                            <p class="lead fw-light mb-4">rizqidesain.id | idekado.ku</p>
+                            <p class="text-muted">
+                                Dusun Suklan Desa Sumberbendo Kecamatan Mantup Kabupaten
+                                Lamongan Provinsi Jawa Timur Indonesia, kode pos 62883
+                            </p>
+                            <div class="d-flex justify-content-center fs-2 gap-4">
+                                <a class="text-gradient" href="https://api.whatsapp.com/send?phone=6285707167531"><i
+                                        class="bi bi-whatsapp"></i></a>
+                                <a class="text-gradient"
+                                    href="https://www.instagram.com/rizqi.mhmmd_?igsh=MTRIbzdpM3U5b2czNg=="><i
+                                        class="bi bi-instagram"></i></a>
+                                <a class="text-gradient position-relative" href="#!">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer-->
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0">Copyright &copy; Your Website 2025</div>
+                </div>
+                <div class="col-auto">
+                    <a class="small" href="#!">Privacy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Terms</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+
+</body>
+
+<!-- Modal -->
+<div class="modal fade" id="produkModal" tabindex="-1" aria-labelledby="produkModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="produkModalLabel">Detail Produk</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Carousel -->
+                <div id="carouselProduk" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="carouselInner"></div>
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduk"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProduk"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelectorAll(".img-clickable").forEach((item) => {
+        item.addEventListener("click", function () {
+            let carouselInner = document.getElementById("carouselInner");
+            carouselInner.innerHTML = ""; // Kosongkan slide sebelumnya
+
+            let index = 1;
+            let isFirst = true;
+            while (this.getAttribute("data-img" + index)) {
+                let imgSrc = this.getAttribute("data-img" + index);
+                let activeClass = isFirst ? "active" : ""; // Set slide pertama sebagai aktif
+
+                let slide = `
+                                    <div class="carousel-item ${activeClass}">
+                                        <img src="${imgSrc}" class="d-block w-100 rounded">
+                                    </div>
+                                `;
+
+                carouselInner.innerHTML += slide;
+                isFirst = false;
+                index++;
+            }
+        });
+    });
+</script>
+<!-- Skrip -->
+<script>
+    // Fungsi untuk membaca parameter dari URL
+    function getParameterByName(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const produkParams = new URLSearchParams(window.location.search).get("produk");
+
+        if (produkParams) {
+            const produkList = produkParams.split(","); // Pisahkan produk dengan koma
+            document.querySelectorAll(".product-card").forEach((card) => {
+                if (!produkList.includes(card.getAttribute("data-produk"))) {
+                    card.style.display = "none"; // Sembunyikan produk yang tidak sesuai
+                }
+            });
+        }
+    });
+
+
+    // Event listener untuk tombol share
+    document.querySelectorAll(".share-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+            let produk = this.getAttribute("data-produk");
+            let url = window.location.origin + window.location.pathname + "?produk=" + produk;
+
+            navigator.clipboard.writeText(url).then(() => {
+                alert("Link produk telah disalin: " + url);
+            }).catch(err => {
+                console.error("Gagal menyalin: ", err);
+            });
+        });
+    });
+</script>
+<!-- SKRIP HARGA -->
+<script>
+    let harga_2X3 = "2.000";
+    let harga_3X4 = "1.500 | 3.000";
+    let harga_4X6 = "1.000";
+    let harga_2R = "1.000";
+    let harga_3R = "2.500";
+    let harga_4R = "3.500";
+    let harga_5R = "4.000";
+    let harga_6R = "5.000";
+    let harga_10R = "10.000";
+    let harga_10RS = "13.000";
+    let harga_12R = "35.000 | 5.000";
+    let harga_12RS = "40.000 | 5.000";
+    let harga_14R = "50.000";
+    let harga_16R = "60.000";
+    let harga_16RS = "70.000";
+    let harga_20R = "85.000";
+    let harga_20RS = "100.000";
+    let harga_24R = "120.000";
+    let harga_24RS = "130.000";
+    let harga_BIG = "145.000";
+
+
+    document.getElementById("harga-2X3").innerHTML = `Foto : Rp ${harga_2X3}`;
+    document.getElementById("harga-3X4").innerHTML = `Foto : Rp ${harga_3X4}`;
+    document.getElementById("harga-4X6").innerHTML = `Foto : Rp ${harga_4X6}`;
+    document.getElementById("harga-2R").innerHTML = `Foto : Rp ${harga_2R}`;
+    document.getElementById("harga-3R").innerHTML = `Foto : Rp ${harga_3R}`;
+    document.getElementById("harga-4R").innerHTML = `Foto : Rp ${harga_4R}`;
+    document.getElementById("harga-5R").innerHTML = `Foto : Rp ${harga_5R}`;
+    document.getElementById("harga-6R").innerHTML = `Foto : Rp ${harga_6R}`;
+    document.getElementById("harga-10R").innerHTML = `Foto : Rp ${harga_10R}`;
+    document.getElementById("harga-10RS").innerHTML = `Foto : Rp ${harga_10RS}`;
+    document.getElementById("harga-12R").innerHTML = `Foto : Rp ${harga_12R}`;
+    document.getElementById("harga-12RS").innerHTML = `Foto : Rp ${harga_12RS}`;
+    document.getElementById("harga-14R").innerHTML = `Foto : Rp ${harga_14R}`;
+    document.getElementById("harga-16R").innerHTML = `Foto : Rp ${harga_16R}`;
+    document.getElementById("harga-16RS").innerHTML = `Foto : Rp ${harga_16RS}`;
+    document.getElementById("harga-20R").innerHTML = `Foto : Rp ${harga_20R}`;
+    document.getElementById("harga-20RS").innerHTML = `Foto : Rp ${harga_20RS}`;
+    document.getElementById("harga-24R").innerHTML = `Foto : Rp ${harga_24R}`;
+    document.getElementById("harga-24RS").innerHTML = `Foto : Rp ${harga_24RS}`;
+    document.getElementById("harga-BIG").innerHTML = ` Rp ${harga_BIG}`;
+</script>
+<!-- SKRIP FRAME -->
+<script>
+    let FRAME_4R = "14.000";
+    let FRAME_5R = "15.000";
+    let FRAME_6R = "17.000";
+    let FRAME_10R = "23.000";
+    let FRAME_10RS = "24.000";
+    let FRAME_12R = "35.000";
+    let FRAME_12RS = "40.000";
+    let FRAME_14R = "Tidak Tersedia";
+    let FRAME_16R = "70.000";
+    let FRAME_16RS = "80.000";
+    let FRAME_20R = "115.000";
+    let FRAME_20RS = "125.000";
+    let FRAME_24R = "145.000";
+    let FRAME_24RS = "165.000";
+
+
+    document.getElementById("FRAME-4R").innerHTML = `Pigura : Rp ${FRAME_4R}`;
+    document.getElementById("FRAME-5R").innerHTML = `Pigura : Rp ${FRAME_5R}`;
+    document.getElementById("FRAME-6R").innerHTML = `Pigura : Rp ${FRAME_6R}`;
+    document.getElementById("FRAME-10R").innerHTML = `Pigura : Rp ${FRAME_10R}`;
+    document.getElementById("FRAME-10RS").innerHTML = `Pigura : Rp ${FRAME_10RS}`;
+    document.getElementById("FRAME-12R").innerHTML = `Pigura : Rp ${FRAME_12R}`;
+    document.getElementById("FRAME-12RS").innerHTML = `Pigura : Rp ${FRAME_12RS}`;
+    document.getElementById("FRAME-14R").innerHTML = `Pigura : ${FRAME_14R}`;
+    document.getElementById("FRAME-16R").innerHTML = `Pigura : Rp ${FRAME_16R}`;
+    document.getElementById("FRAME-16RS").innerHTML = `Pigura : Rp ${FRAME_16RS}`;
+    document.getElementById("FRAME-20R").innerHTML = `Pigura : Rp ${FRAME_20R}`;
+    document.getElementById("FRAME-20RS").innerHTML = `Pigura : Rp ${FRAME_20RS}`;
+    document.getElementById("FRAME-24R").innerHTML = `Pigura : Rp ${FRAME_24R}`;
+    document.getElementById("FRAME-24RS").innerHTML = `Pigura : Rp ${FRAME_24RS}`;
+</script>
+
+</html>
