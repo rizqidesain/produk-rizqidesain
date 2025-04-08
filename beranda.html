@@ -16,9 +16,12 @@
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 
@@ -74,6 +77,8 @@
             font-weight: bold;
             text-align: center;
             width: 100%;
+            align-self: start;
+            /* Membuat item rata atas */
         }
 
 
@@ -99,20 +104,31 @@
 
         /* Jika layar lebih kecil dari 576px (HP) */
         @media (max-width: 576px) {
-        .ribbon {
-            position: absolute;
-            top: 10px;
-            left: -10px;
-            background: red;
-            color: white;
-            padding: 3px 13px;
-            font-size: 10px;
-            font-weight: bold;
-            transform: rotate(-30deg);
-            transform-origin: left top;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            .ribbon {
+                position: absolute;
+                top: 10px;
+                left: -10px;
+                background: red;
+                color: white;
+                padding: 3px 13px;
+                font-size: 10px;
+                font-weight: bold;
+                transform: rotate(-30deg);
+                transform-origin: left top;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
         }
 
+        .menu-item.disabled {
+            pointer-events: none;
+            /* Tidak bisa diklik */
+            opacity: 0.5;
+            /* Tampilan redup */
+            cursor: not-allowed;
+            /* Kursor tanda larangan */
+            text-decoration: none;
+            /* Hilangkan underline kalau ada */
         }
     </style>
 
@@ -123,7 +139,8 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
             <div class="container px-5">
-                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">rizqidesain.id</span></a>
+                <a class="navbar-brand" href="beranda.html"><span
+                        class="fw-bolder text-primary">rizqidesain.id</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -132,32 +149,38 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                         <li class="nav-item">
-                          <a class="nav-link" href="outdoor.html">Produk Outdoor</a>
+                            <a class="nav-link" href="outdoor.html">Outdoor</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link px-4 py-2"
-                            href="indoor.html">Produk Indoor</a>
+                            <a class="nav-link px-4 py-2" href="indoor.html">Indoor</a>
                         </li>
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="undanganDropdown" role="button">
-                            Undangan
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="undanganDropdown">
-                            <li><a class="dropdown-item" href="undangan-1000an.html">Undangan Blangko 1.000 an</a></li>
-                            <li><a class="dropdown-item" href="#">Undangan Blangko Premium</a></li>
-                            <li><a class="dropdown-item" href="#">Undangan Eksekutif Custom</a></li>
-                            <li><a class="dropdown-item" href="#">Ultah</a></li>
-                            <li><a class="dropdown-item" href="#">Kenduri</a></li>
-                          </ul>
+                            <a class="nav-link dropdown-toggle" href="#" id="undanganDropdown" role="button">
+                                Undangan
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="undanganDropdown">
+                                <li><a class="dropdown-item" href="undangan-1000an.html">Undangan Blangko 1.000 an</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Undangan Blangko Premium</a></li>
+                                <li><a class="dropdown-item" href="#">Undangan Eksekutif Custom</a></li>
+                                <li><a class="dropdown-item" href="#">Ultah</a></li>
+                                <li><a class="dropdown-item" href="#">Kenduri</a></li>
+                            </ul>
                         </li>
-            
+
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Buku Yasiin</a>
+                            <a class="nav-link" href="#">Buku Yasiin</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Amplop Kondangan</a>
+                            <a class="nav-link" href="#">Amplop</a>
                         </li>
-                      </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stiker.html">Stiker</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="foto.html">Foto</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -174,7 +197,8 @@
                                 </div>
                             </div>
                             <h1 class="display-3 fw-bolder mb-0">
-                                <span class="text-gradient d-inline">idekado.ku by rizqidesain.id</span>
+                                <span class="text-gradient d-inline">idekado.ku <span style="font-size: 20px;">by</span>
+                                    rizqidesain.id</span>
                             </h1>
                         </div>
                     </div>
@@ -186,13 +210,15 @@
         <!-- Menu Kecil -->
         <section class="py-4">
             <div class="container px-5">
-                <div class="row gx-3 justify-content-center">
+                <div class="row gx-3 justify-content-center align-items-start">
                     <div class="col-3 text-center">
                         <a href="indoor.html" class="menu-item">
                             <div class="menu-bg">
                                 <i class="bi bi-file-earmark-text"></i>
                             </div>
                             <p>Indoor</p>
+                            <span style="font-weight: normal; font-size: 10px;">print, scan, FC, laminasi, kartu,
+                                dll</span>
                         </a>
                     </div>
                     <div class="col-3 text-center">
@@ -201,14 +227,15 @@
                                 <i class="bi bi-printer"></i>
                             </div>
                             <p>Outdoor</p>
+                            <span style="font-weight: normal; font-size: 10px;">banner, kartu, dll</span>
                         </a>
                     </div>
                     <div class="col-3 text-center">
-                        <a href="#" class="menu-item">
+                        <a href="stiker.html" class="menu-item">
                             <div class="menu-bg">
-                                <i class="bi bi-book"></i>
+                                <i class="bi bi-sticky"></i> <!-- Icon untuk Stiker -->
                             </div>
-                            <p>Buku Yasiin</p>
+                            <p class="text-center">Stiker</p>
                         </a>
                     </div>
                     <div class="col-3 text-center">
@@ -225,7 +252,69 @@
                 </div>
             </div>
             <div class="container px-5 mt-5">
-                <div class="row gx-3 justify-content-center">
+                <div class="row gx-3 justify-content-center align-items-start">
+                    <div class="col-3 text-center">
+                        <a href="#" class="menu-item disabled">
+                            <div class="menu-bg">
+                                <i class="bi bi-envelope-open-heart"></i>
+                            </div>
+                            <p class="text-center">Undangan Blangko Premium</p>
+                        </a>
+                    </div>
+                    <div class="col-3 text-center">
+                        <a href="#" class="menu-item disabled">
+                            <div class="menu-bg">
+                                <i class="bi bi-envelope-open"></i>
+                            </div>
+                            <p class="text-center">Undangan Eksekutif Custom</p>
+                        </a>
+                    </div>
+                    <div class="col-3 text-center">
+                        <a href="#" class="menu-item disabled">
+                            <div class="menu-bg">
+                                <i class="bi bi-balloon"></i>
+                            </div>
+                            <p class="text-center">Undangan / Card Baby</p>
+                        </a>
+                    </div>
+
+                    <div class="col-3 text-center">
+                        <a href="#" class="menu-item disabled">
+                            <div class="menu-bg">
+                                <i class="bi bi-envelope-paper"></i>
+                            </div>
+                            <p class="text-center">Undangan Kenduri</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-5 mt-5">
+                <div class="row gx-3 justify-content-center align-items-start">
+                    <div class="col-3 text-center">
+                        <a href="foto.html" class="menu-item">
+                            <div class="menu-bg">
+                                <i class="bi bi-image"></i>
+                            </div>
+                            <p>Cetak Foto</p>
+                        </a>
+                    </div>
+                    <div class="col-3 text-center">
+                        <a href="#" class="menu-item disabled">
+                            <div class="menu-bg">
+                                <i class="fa-solid fa-paint-roller"></i> <!-- Icon untuk Sablon Satuan -->
+                            </div>
+                            <p class="text-center">Sablon Satuan</p>
+                        </a>
+                    </div>
+                    <div class="col-3 text-center">
+                        <a href="#" class="menu-item disabled">
+                            <div class="menu-bg">
+                                <i class="bi bi-calendar2-day"></i> <!-- Icon untuk Kalender -->
+                            </div>
+                            <p class="text-center">Kalender</p>
+                        </a>
+                    </div>
+
                     <div class="col-3 text-center">
                         <a href="kalkulator.html" class="menu-item">
                             <div class="menu-bg">
